@@ -1,0 +1,260 @@
+.farmaku-logo {
+	width: 206px;
+	align-items: center;
+	margin: auto;
+}
+
+.spacer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	hr {
+		background: var(--ion-color-divider);
+		width: 32%;
+	}
+
+	span {
+		color: var(--ion-color-black-3);
+		font-size: 14px;
+		letter-spacing: 0.14px;
+	}
+}
+
+.socmed {
+	ion-item {
+		border: 1px solid var(--ion-color-gray);
+		border-radius: 8px;
+		--min-height: unset;
+		margin: 1rem;
+		cursor: pointer;
+
+		ion-label {
+			ion-img {
+				width: 23px;
+				height: 23px;
+			}
+		}
+	}
+}
+
+.login-form {
+
+	ion-label,
+	p,
+	a {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	ion-label {
+		padding-top: 2rem;
+		display: inline-block;
+	}
+
+	a {
+		color: var(--ion-color-primary);
+		font-weight: 700;
+		float: right;
+	}
+
+	p {
+		margin: 4px 0px;
+		font-weight: 700;
+		font-family: Maven Pro;
+
+		a {
+			padding: 0;
+		}
+	}
+}
+
+.card-list {
+	p {
+		margin: 0;
+	}
+
+	ion-col:first-child {
+		padding: 16px 8px;
+		text-align: center;
+
+		p {
+			color: var(--ion-color-black-3);
+			font-size: 14px;
+		}
+	}
+
+	ion-col:last-child {
+		padding: 0 8px;
+
+		ion-row {
+			margin: 16px 4px;
+			background: #FFFFFF;
+			box-shadow: 0px 1px 6px rgba(51, 53, 55, 0.2);
+			border-radius: 8px;
+			box-sizing: border-box;
+			border-radius: 8px;
+			text-align: left;
+			padding: 16px;
+			display: flex;
+			align-items: center;
+
+			ion-col {
+				padding: 0px;
+			}
+
+			ion-col:first-child {
+				display: flex;
+				align-items: center;
+				justify-content: start;
+			}
+
+			ion-col:nth-child(2) {
+				margin-left: .5rem;
+
+				p {
+					margin: 4px 0px;
+				}
+
+				p:first-child {
+					font-family: Maven Pro !important;
+					font-weight: 700 !important;
+					font-size: 16px !important;
+					color: var(--ion-color-dark) !important;
+				}
+
+				p:last-child {
+					font-size: 14px;
+					color: var(--ion-color-black-3);
+				}
+			}
+		}
+	}
+}
+
+.otp-rq {
+	ion-row:first-child {
+		ion-col {
+			text-align: center;
+
+			p {
+				margin: 4px 0px;
+			}
+
+			p:first-child {
+				color: var(--ion-color-black-3);
+				font-size: 14px;
+				letter-spacing: 0.14px;
+			}
+
+			p:last-child {
+				color: var(--ion-color-dark);
+				font-family: Maven Pro;
+				font-size: 16px;
+				font-weight: 700;
+				letter-spacing: 0.16px;
+			}
+		}
+	}
+
+	ion-row:last-child {
+		ion-col {
+			text-align: center;
+		}
+
+		ion-col:first-child {
+			color: var(--ion-color-dark);
+			font-size: 14px;
+			letter-spacing: 0.14px;
+
+			a,
+			span {
+				color: var(--ion-color-primary);
+				font-weight: 700;
+			}
+		}
+
+		.spacer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-top: 16px;
+			padding-bottom: 16px;
+
+			hr {
+				background: var(--ion-color-divider);
+				width: 32%;
+			}
+
+			span {
+				color: var(--ion-color-black-3);
+				font-size: 14px;
+				letter-spacing: 0.14px;
+			}
+		}
+
+		ion-col:last-child {
+			font-size: 14px;
+			letter-spacing: 0.14px;
+			font-weight: 400;
+
+			a {
+				color: var(--ion-color-dark);
+			}
+
+			strong {
+				color: var(--ion-color-primary);
+			}
+		}
+	}
+}
+
+.otp-padding {
+	padding: 48px 0px;
+	text-align: center;
+}
+
+ng-otp-input {
+	display: block;
+	text-align: center;
+}
+
+.disabled {
+	pointer-events: none;
+	color: #dddddd !important;
+}
+
+.outer-gbtn {
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	#gbtn {
+		margin: 0 auto;
+	}
+
+	@media (max-width: 576px) {
+		#gbtn {
+			padding-left: 2.5rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		#gbtn {
+			padding-left: 2.5rem;
+		}
+	}
+}
+
+.validation-error {
+	font-size: 12px;
+	color: var(--ion-color-danger);
+	display: block;
+	margin-top: 1rem;
+}
+
+.other-method {
+	font-size: 16px;
+	line-height: 2;
+}

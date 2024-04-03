@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Farmaku</string>
+    <string name="title_activity_main">Farmaku</string>
+    <string name="package_name">com.farmaku.app</string>
+    <string name="custom_url_scheme">com.farmaku.app</string>
+    <string name="server_client_id">797917871938-oh5sqfum8es83bok6hipkkjcimidph10.apps.googleusercontent.com</string>
+</resources>

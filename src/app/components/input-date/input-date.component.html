@@ -1,0 +1,42 @@
+<ion-item class="item-highlight"  lines="none"> 
+  <ion-label position="floating" class="pl-0 ml-0"
+    [class.label-error]="!isValid">
+    {{ label }}
+  </ion-label>
+  <ion-input
+    value="{{ inputModel | date: 'dd MMMM YYYY' }}"
+    id="date"
+    class="ion-text-start"
+  ></ion-input>
+
+  <ion-modal trigger="date" class="modal-date">
+    <ng-template>
+      <ion-header class="ion-no-border srx-shadow">
+        <ion-toolbar> 
+          <ion-buttons slot="end">
+            <ion-button class='backButton' (click)="cancel()" [strong]="true"><ion-icon slot="icon-only" name="close" color="secondary"></ion-icon></ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="noscroll">
+        <ion-datetime  
+          size="cover"
+          presentation="date"
+          [name]="name"
+          [value]="value"
+          displayFormat="dd MMMM YYYY" 
+          [class.input-error]="!isValid"
+          [(ngModel)]="inputModel" 
+          (ngModelChange)="inputModelChange.emit(inputModel)"
+          autocomplete="off"
+          (ionChange)="onChangeEv($event)">
+        </ion-datetime>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <img width="auto" height="auto" class="calendar-icon" src="../../../assets/images/account/calendar.svg" alt="Calendar Icon">
+  
+  <span class="info-message" *ngIf="infoMessage.length">{{infoMessage}}</span>
+</ion-item> 
+ 

@@ -1,0 +1,40 @@
+ion-grid{
+    padding: 0;
+    ion-row{
+        ion-col{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.14px;
+            font-weight: 500;
+        }
+        ion-col:last-child{
+            padding-left: 10px!important;
+        }
+    }
+}
+.ibtn{ 
+    --box-shadow: none; 
+    --padding-top: 11px;
+    --padding-bottom: 11px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    text-transform: none;
+    font-size: 14px;
+    font-weight: 900;
+    --border-radius: 8px!important;
+    margin: 16px 10px;
+}
+.cbtn{
+    ion-icon{
+        color: #7A7B7C;
+    }
+}
+ion-header{
+    ion-toolbar{
+        --background: url('../../../assets/images/download-app/app-download-bg.png') center / 100%;
+    } 
+}

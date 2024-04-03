@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border srx-shadow">
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="isModal || isModalPage">
+      <ion-button class='backButton' color="secondary" (click)="modalDismissHandler()">
+        <ion-icon slot="icon-only" name="close" *ngIf="isModal"></ion-icon>
+        <ion-icon slot="icon-only" name="arrow-back" *ngIf="isModalPage"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start" *ngIf="ableBack">
+      <ion-button class='backButton' color="secondary" (click)="backHandler()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark" class="maven-font medium-text font-weight-bold" *ngIf="!isSeoTitle">{{ title }}</ion-title>
+    <ion-title color="dark" class="maven-font medium-text font-weight-bold" *ngIf="isSeoTitle"><h1>{{ title }}</h1></ion-title>
+
+    <ion-button 
+      fill="clear" 
+      *ngIf="isActionButton" 
+      slot="end" 
+      color="secondary" 
+      class="srx-button m-0 mr-2 normal-text font-weight-bold no-letter-spacing" 
+      [disabled]="isDisabledActionButton"
+      (click)="actionButtonHandler()" [innerHtml]="actionButtonTitle"> 
+    </ion-button>
+
+    <ion-buttons slot="end">
+      
+      <!-- Homepage -->
+      <ion-button (click)="gotoHome()" *ngIf="ableHome">
+        <img class="home-icon" src="../../../assets/icon/home.png">
+      </ion-button>
+    </ion-buttons>
+
+    <ng-content></ng-content>
+
+  </ion-toolbar>
+</ion-header>

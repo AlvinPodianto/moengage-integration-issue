@@ -1,0 +1,26 @@
+<srx-header [title]="title" [isModal]="true" (onModalDismiss)="onModalDismiss()"></srx-header>
+
+<ion-content>
+  <div class="socmed-list">
+    <div class="socmed-item" (click)="actionShare('whatsapp')">
+      <ion-icon src="../../../assets/svg/whatsapp.svg"></ion-icon>
+      <p>Whatsapp</p>
+    </div>
+    <div class="socmed-item" (click)="actionShare('facebook')">
+      <ion-icon src="../../../assets/svg/facebook.svg"></ion-icon>
+      <p>Facebook</p>
+    </div>
+    <div class="socmed-item" (click)="actionShare('twitter')">
+      <ion-icon src="../../../assets/svg/twitter.svg"></ion-icon>
+      <p>Twitter</p>
+    </div>
+    <div class="socmed-item" (click)="actionShare('email')">
+      <ion-icon src="../../../assets/svg/email.svg"></ion-icon>
+      <p>Email</p>
+    </div>
+    <div class="socmed-item" (click)="actionShare('copy')">
+      <ion-icon src="../../../assets/svg/copy.svg"></ion-icon>
+      <p>Salin Link</p>
+    </div>
+  </div>
+</ion-content>

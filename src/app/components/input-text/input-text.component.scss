@@ -1,0 +1,103 @@
+
+
+.info-message{
+    font-size: 12px;
+    color: var(--ion-color-black-3);
+    margin-top:4px;
+}
+
+.info-message-error{
+    color: var(--ion-color-danger);
+}
+
+.label-error{
+    color: var(--ion-color-danger) !important;
+}
+.input-error{
+    border: 1px solid var(--ion-color-danger);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.input-rounded{
+    .item-highlight{
+        --highlight-color-valid:none;
+        --highlight-color-focused: none;
+        --background-focused: none;
+    }
+    
+    .profile-input{ 
+        --inner-padding-end: 0.5rem;
+        border-bottom: 1px solid var(--ion-color-gray);
+        margin-bottom: 1rem;
+        margin-top: .5rem;
+        --border-radius: 8px;
+        overflow: unset; 
+    }
+    
+    
+    .item-has-focus .label-floating, .item-has-value .custom-transform{
+        transform: translate(0px, 12px) scale(0.8) !important;
+    }
+    
+    .item-has-focus .label-floating, .item-has-value .default-transform{
+        transform: translate(8px, 12px) scale(0.8) !important;
+    }
+    
+    .form-textbox{
+        border: 1px solid var(--ion-color-gray);
+        padding: .3rem 1rem !important;
+        border-radius: 8px;
+    }
+    
+    .item-has-focus .label-floating, .item-has-value .label-floating{ 
+        z-index: 100;
+        background: #fff;
+        max-width: fit-content;
+        color: var(--ion-color-gray);
+        padding: 0 5px;
+    }
+    
+    .label-floating.sc-ion-label-md-h {
+        -webkit-transform: translate(1rem,165%) !important;
+        transform: translate(1rem,165%) !important;
+    }
+}
+
+.input-noborder{
+    .item-highlight{
+        --highlight-color-valid:none;
+        --highlight-color-focused: none;
+        --background-focused: none;
+    }
+    
+    .form-textbox{
+        border-bottom: 1px solid var(--ion-color-gray); 
+    }
+
+    .label-floating{
+        color: var(--ion-color-gray);
+    }
+
+    .item-has-focus .label-floating, .item-has-value .label-floating{ 
+        z-index: 100;
+        background: #fff;
+        max-width: fit-content;
+        color: var(--ion-color-gray-tint);
+    }
+    
+}
+.w-100{
+    width: 100%;
+}

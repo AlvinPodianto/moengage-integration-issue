@@ -1,0 +1,94 @@
+[
+    {
+      "paymentTypeName": "Virtual Account",
+      "paymentMethod": [
+        {
+          "id": 2,
+          "name": "Transfer BCA Virtual Account",
+          "logoUrl": "https://storage.googleapis.com/rxstorage/Payment/06%20-%20BCA%20Logo.png",
+          "title1":"ATM BCA",
+          "title2":"Klik BCA",
+          "title3":"m-BCA",
+          "description1":"<ul class='list-number'><li>Masukkan kartu ATM & PIN</li><li>Pada menu utama, pilih Transaksi Lainnya</li><li>Pilih Transfer</li><li>Pilih ke rekening BCA Virtual Account</li><li>Masukkan Nomor Rekening pembayaran (11 Digit) Anda lalu tekan Benar</li><li>Masukkan Jumlah Tagihan sesuai dengan Total Tagihan</li><li>Pada halaman konfirmasi transfer akan muncul detail pembayaran Anda. Jika informasi telah sesuai tekan Ya</li><li>Ikuti instruksi untuk menyelesaikan pembayaran</li><li>Simpan struk transaksi sebagai bukti pembayaran</li></ul>",
+          "description2":"<ul class='list-number'><li>Masuk pada Klik BCA</li><li>Pada menu utama, pilih Transfer ke BCA Virtual Account</li><li>Masukkan Nomor BCA Virtual Account, atau pilih Dari Daftar Transfer</li><li>Jumlah yang akan ditransfer, nomor rekening, dan nama merchant akan muncul di halaman konfirmasi pembayaran, jika informasi benar pilih Lanjutkan</li><li>Ambil BCA Token Anda</li><li>Masukkan KEYBCA Response APPLI 1 dan tekan Submit</li><li>Ikuti instruksi untuk menyelesaikan pembayaran</li><li>Simpan bukti transaksi sebagai bukti pembayaran</li></ul>",
+          "description3":"<ul class='list-number'><li>Lakukan Log In pada aplikasi BCA Mobile</li><li>Pilih menu m-BCA, kemudian masukkan Kode Akses m-BCA</li><li>Pilih m-Transfer, kemudian pilih BCA Virtual Account</li><li>Pilih dari Daftar Transfer, atau masukkan Nomor Virtual Account Tujuan</li><li>Masukkan Jumlah Tagihan sesuai dengan Total Tagihan</li><li>Masukkan Pin m-BCA, kemudian pilih OK</li><li>Pembayaran telah selesai</li><li>Simpan bukti transaksi sebagai bukti pembayaran</li></ul>"
+        },
+        {
+          "id": 3,
+          "name": "Transfer Permata Virtual Account",
+          "logoUrl": "https://storage.googleapis.com/rxstorage/Payment/09%20-%20Permata%20Logo.png",
+          "title1":"ATM Permata Bank",
+          "title2":"",
+          "title3":"",
+          "description1":"<ul class='list-number'><li>Masukkan Kartu ATM & PIN</li><li>Pada menu utama, pilih Transaksi Lainnya</li><li>Pilih Pembayaran</li><li>Pilih Pembayaran lainnya dan pilih Virtual Account</li><li>Masukkan Nomor Rekening Pembayaran (16 Digit) Anda lalu tekan Benar</li><li>Masukkan Jumlah Tagihan sesuai dengan Total Tagihan</li><li>Pada halaman konfirmasi transfer akan muncul detail pembayaran Anda. Jika informasi telah sesuai tekan Ya</li><li>Ikuti instruksi untuk menyelesaikan pembayaran</li><li>Simpan struk transaksi sebagai bukti pembayaran +) Jika terjadi masalah terkait pembayaran Anda, silakan untuk menghubungi Customer Service Kami.</li></ul>",
+          "description2":"",
+          "description3":""
+        },
+        {
+          "id": 6,
+          "name": "Transfer BNI Virtual Account",
+          "logoUrl": "https://storage.googleapis.com/rxstorage/Payment/08%20-%20BNI%20Logo.png",
+          "title1":"ATM BNI",
+          "title2":"Internet Banking",
+          "title3":"Mobile Banking",
+          "description1":"<ul class='list-number'><li>Masukkan kartu ATM & PIN</li><li>Pada menu utama, pilin Menu Lainnya</li><li>Pilih Transfer</li><li>Pilih Rekening Tabungan dan pilih ke Rekening BNI</li><li>Masukkan Nomor Virtual Account pembayaran Anda lalu tekan Benar</li><li>Masukkan Jumlah Tagihan sesuai dengan Total Tagihan</li><li>Pada halaman konfirmasi transfer akan muncul detail pembayaran Anda. Jika informasi telah sesuai tekan Ya</li><li>Ikuti instruksi untuk menyelesaikan pembayaran</li><li>Simpan struk transaksi sebagai bukti pembayaran</li></ul>",
+          "description2":"<ul class='list-number'><li>Ketik alamat https://ibank.bni.co.id kemudian pilih Masuk</li><li>Pada menu utama, silakan masukkan User id dan Password Anda menu Transfer kemudian pilih Tambah Rekening</li><li>Masukkan Nama, Nomor Rekening, dan Em.Lanjutlalu pilih</li><li>Masukkan Kode Otentikasi dari token Anda dan pilih Lanjut</li><li>Kembali ke menu utama dan pilih Transfer lalu Transfer Antar Rekening BNI</li><li>Pilih rekening yang telah Anda favoritkan sebelumnya di Rekening Tujuan lalu lanjutkan pengisian, dan pilih Lanjut</li><li>Pastikan detail transaksi Anda benar, lalu masukkan Kode Otentikasi dan Lanjut</li><li>kuti instruksi untuk menyelesaikan pembayaran</li><li>Simpan bukti transaksi sebagai bukti pembayaran</li></ul>",
+          "description3":"<ul class='list-number'><li>Buka aplikasi BNI mobile Banking dan Login</li><li>Pada menu utama, pilih Transfer</li><li>Pilih menu Virtual Account Billing</li><li>Pilih Rekening Debit yang akan digunakan</li><li>Pilih menu Input Baru dan masukkan 16 Digit Nomor Virtual Account</li><li>Informasi tagihan akan muncul pada halaman validasi</li><li>Jika informasi telah sesuai, silakan untuk masukkan Password Transaksi dan pilih Lanjut</li><li>Transaksi Anda akan diproses</li><li>Simpan bukti transfer sebagai bukti pembayaran</li></ul>"
+        },
+        {
+          "id": 7,
+          "name": "Transfer BRI Virtual Account",
+          "logoUrl": "https://storage.googleapis.com/rxstorage/Payment/14%20-%20BRI%20Logo.png",
+          "title1":"ATM BRI",
+          "title2":"IB BRI",
+          "title3":"BRImo",
+          "description1":"<ul class='list-number'><li>Masukkan Kartu ATM & PIN</li><li>Pada menu utama, pilih Transaksi Lainnya</li><li>Pilih Pembayaran</li><li>Pilih Lainnya dan pilin BRIVA</li><li>Masukkan Nomor BRIVA pelanggan dan pilih Benar</li><li>Jumlah pembayaran, nomor BRIVA dan nama merchant akan muncul pada halaman konfirmasi pembayaran. Jika informasi yang dicantumkan benar, pilih Ya</li><li>Pembayaran telah selesai</li><li>Simpan struk transaksi sebagai bukti pembayaran</li></ul>",
+          "description2":"<ul class='list-number'><li>Masuk pada Internet Banking BRI</li><li>Pada menu utama, pilin menu Pembayaran & Pembelian</li><li>Pilih sub menu BRIVA</li><li>Masukkan Nomor BRIVA pelanggan</li><li>Jumlah pembayaran, nomor BRIVA dan nama merchant akan muncul pada halaman konfirmasi pembayaran. Jika informasi yang dicantumkan benar, pilih Kirim</li><li>Masukkan Password dan mToken, pilih Kirim</li><li>Pembayaran telah selesai</li><li>Simpan bukti transaksi sebagai bukti pembayaran</li></ul><li>Masuk ke dalam aplikasi BRI Mobile, pilin Mobile Banking BRI</li><li>Pada menu utama, pilin Pembayaran</li><li>Pilih BRIVA</li><li>Masukkan Nomor BRIVA pelanggan </li></ul>",
+          "description3":"<ul class='list-number'><li>Masuk ke dalam aplikasi BRI Mobile, pilih Mobile Banking BRI</li><li>Pada menu utama, pilih Pembayaran</li><li>Pilih BRIVA</li><li>Masukkan Nomor BRIVA pelanggan</li><li>Jumlah pembayaran, nomor BRIVA dan nama merchant akan muncul pada halaman konfirmasi pembayaran. Jika informasi yang dicantumkan benar, pilih Continue</li><li>Masukkan Mobile Banking BRI PIN, pilih OK</li><li>Pembayaran telah selesai</li><li>Simpan bukti transaksi sebagai bukti pembayaran</li></ul>"
+        } 
+      ]
+    },
+    {
+      "paymentTypeName": "e-Wallet",
+      "paymentMethod": [
+        {
+          "id": 4,
+          "name": "Gopay",
+          "logoUrl": "https://storage.googleapis.com/rxstorage/Payment/10%20-%20Gopay%20Logo.png",
+          "title1":"Aplikasi GoPay",
+          "title2":"",
+          "title3":"",
+          "description1":"<ul class='list-number'><li>Tekan bayar dengan GoPay</li><li>Aplikasi Gojek akan terbuka secara otomatis </li><li>Cek detil transaksi Anda, kemudian tekan Lanjutkan</li><li>Cek saldo GoPay Anda, kemudian tekan Bayar</li><li>Masukkan PIN Anda </li><li>Jumlah pembayaran, nomor BRIVA dan nama merchant akan muncul pada halaman konfirmasi pembayaran. Jika informasi yang dicantumkan benar, pilih Continue</li><li>Masukkan Mobile Banking BRI PIN, pilih OK</li><li>Pembayaran telah selesai</li><li>Simpan bukti transaksi sebagai bukti pembayaran</li></ul>",
+          "description2":"",
+          "description3":""
+        },
+        {
+          "id": 8,
+          "name": "Dana",
+          "logoUrl": "https://storage.googleapis.com/rxstorage/Payment/11%20-%20DANA%20Logo.png",
+          "title1":"Aplikasi Dana",
+          "title2":"",
+          "title3":"",
+          "description1":"<ul class='list-number'><li>Tekan bayar dengan Dana</li><li>Aplikasi Dana akan terbuka secara otomatis</li><li>Cek detil transaksi Anda, kemudian tekan Lanjutkan</li><li>Cek saldo Dana Anda, kemudian tekan Bayar</li><li>Masukkan PIN Anda</li><li>Transaksi Anda telah selesai</li></ul>",
+          "description2":"",
+          "description3":""
+        }
+      ]
+    },
+    {
+      "paymentTypeName": "Kartu Kredit",
+      "paymentMethod": [
+            {
+            "id": 1,
+          "name": "Kartu Kredit",
+          "logoUrl": "https://storage.googleapis.com/rxstorage/Payment/01%20-%20Credit%20Card.png",
+          "title1":"Kartu Kredit VISA/MasterCard/JCB",
+          "title2":"",
+          "title3":"",
+          "description1":"<ul class='list-number'><li>Lihat kembali detail pembayaran Anda. Jika informasi telah sesuai silakan untuk mengisi data kartu kredit Anda</li><li>Masukkan<b>Email</b>dan<b>Nomor Telepon Anda</b></li><li>Masukkan<b>Nomor Kartu Kredit</b>Anda yang berada di depan kartu</li><li>Masukkan<b>Masa Berlaku Kartu Kredit</b>sesuai yang tertera pada kartu</li><li>Masukkan<b>kode CVV</b>yang tertera pada bagian belakang kartu</li><li>Pilih<b>Bayar Sekarang</b></li><li>Masukkan<b>kode OTP atau Password</b>yang telah diberikan oleh Bank, dan pilih<b>OK</b></li><li>Transaksi telah selesai</li><li>Simpan bukti transaksi sebagai bukti pembayaran</li><br><span class='small-txt'>*) Jika terjadi masalah terkait pembayaran Anda, silakan untuk menghubungi Customer Service Kami.</span></ul>",
+          "description2":"",
+          "description3":""
+        }
+      ]
+    }
+  ] 

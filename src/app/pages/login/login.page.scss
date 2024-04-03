@@ -1,0 +1,111 @@
+.farmaku-logo {
+    width: 206px;
+    align-items: center;
+    margin: auto;
+}
+
+.spacer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    hr {
+        background: var(--ion-color-divider);
+        width: 32%;
+    }
+
+    span {
+        color: var(--ion-color-black-3);
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+}
+
+.socmed {
+    ion-item {
+        border: 1px solid var(--ion-color-gray);
+        border-radius: 8px;
+        --min-height: unset;
+        margin: 1rem;
+        cursor: pointer;
+
+        ion-label {
+            ion-img {
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+}
+
+.login-form {
+
+    ion-label,
+    p,
+    a {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    ion-label {
+        padding-top: 2rem;
+        display: inline-block;
+    }
+
+    a {
+        color: var(--ion-color-primary);
+        font-weight: 700;
+        float: right;
+    }
+
+    p {
+        margin: 4px 0px;
+        font-weight: 700;
+        font-family: Maven Pro;
+
+        a {
+            padding: 0;
+        }
+    }
+}
+
+.outer-gbtn {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #gbtn {
+        margin: 0 auto;
+    }
+ 
+    @media (max-width: 576px) {
+        #gbtn {
+            padding-left: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #gbtn {
+            padding-left: 1.5rem;
+        }
+    }
+
+    @media (max-width: 992px) {
+        #gbtn {
+            padding-left: 1.5rem;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        #gbtn {
+            padding-left: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 1400px) {
+        #gbtn {
+            padding-left: 0;
+        }
+    }
+}

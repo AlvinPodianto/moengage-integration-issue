@@ -1,0 +1,332 @@
+.card-menu>ion-col:nth-child(1), .card-menu>ion-col:nth-child(2) {
+    border-right: 1px dashed #EDF0F2; 
+} 
+ion-grid{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+ion-card{ 
+    box-shadow: 0px 1px 6px rgba(51, 53, 55, 0.2);
+    border-radius: 10px;
+}
+.account-user-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon{
+    font-size: 22px;
+    color: var(--ion-color-medium);
+}
+a:link{
+    text-decoration: none;
+}
+.border-custom{
+    border-bottom: 1px solid rgba(237, 240, 242, 1);
+}
+.hr-custom{
+    height: 4px; 
+    background: rgba(237, 240, 242, 1);
+}
+.edit-section{
+    align-self: center;
+}
+.edit-btn{
+    font-family: 'Maven Pro', sans-serif;
+    --ion-font-family: 'Maven Pro', sans-serif;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    img{
+        margin-right: 5px;
+    }
+}
+
+.blue-text{
+    font-size: 12px;
+    color: var(--ion-color-secondary); 
+    font-weight: bold; 
+} 
+.point-caption{ 
+    vertical-align: 3.5px;    
+    margin-left: 0.25rem;
+}
+
+.info-card{
+    background: #FFFFFF;
+    border: 1.5px solid #2385C8;
+    border-radius: 10px;
+	display: flex;
+	align-items: center;
+    justify-content: center;  
+    padding: 0px;    
+    margin-right: 6px;
+    ion-col{ 
+        padding: 0px;
+        p{ 
+            color: var(--ion-color-step-600, #666666);
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            text-align: left;  
+            margin-left: .25rem!important; 
+            line-height: 20px;
+            b{
+                color: #2385C8;
+            }
+        }
+    }
+    ion-icon{
+        position: absolute;
+        right: -10px;
+        top: 5px;
+        font-size: 18px;
+        color: #333537;
+    }
+}
+
+.icon-warning{
+    color: #F33C45;
+}
+
+.order-circle{ 
+    width: 24px;
+    height: 24px;  
+    background: #F77E21;
+    border-radius: 12px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.002em;
+    color: #FFFFFF;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-right: .5rem;
+}
+
+.custom-col{
+    margin-right: 16px;
+}
+.slider-index { 
+    position: absolute;
+    z-index: 1;
+    bottom: 1.5rem;
+    left: 1rem; 
+    font-size: 10px;  
+    letter-spacing: 0px; 
+    background: #EDF0F2;
+    border-radius: 24px;
+    padding-top:3px;
+    padding-bottom: 3px;
+    padding-left:9px;
+    padding-right:9px;
+}
+
+.all-promo{
+    position: absolute;
+    right: 1rem;
+    margin-top: -2rem;
+    z-index: 98;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    p{
+        font-size: 10px;
+        line-height: 12px;
+        margin:0.25rem 0.5rem;
+        color: #FFF;
+    }
+}
+
+.swiper-zoom-container>img, .swiper-zoom-container>svg, .swiper-zoom-container>canvas{
+    object-fit: fill !important;
+}
+
+.no-slider{
+    background: var(--ion-color-secondary);
+    height: 300px;
+}
+
+a:link{
+  text-decoration: none!important;
+  color:#000;
+}
+
+.slider-navigation-left{
+    position: absolute;
+    transform: translateX(1.5rem);
+    transform: translateY(-5rem);
+}
+.slider-navigation-right{
+    position: absolute;
+    right: .5rem;
+    transform: translateX(1.5rem);
+    transform: translateY(-5rem);
+}
+.nav{
+    --background: #fff;
+    --color:var(--ion-color-dark);
+    --box-shadow: 0 1px 7px 1px rgb(0 0 0 / 12%);
+    --padding-top: 5px !important;
+    --padding-bottom: 5px !important;
+    --padding-start: 5px !important;
+    --padding-end: 5px !important;
+    width: 25px !important;
+    height: 25px !important;
+
+}
+:host ::ng-deep .swiper-pagination{
+    text-align: left;
+    left: 0.5rem;
+    bottom: -0.5rem;
+    z-index: 3;
+    position: relative;
+    --bullet-background-active: #2385C8;
+
+    .swiper-pagination-bullet {
+      --bullet-background: #C1C6C6;
+      width: 8px;
+      height: 8px;
+      opacity: 1;
+      margin: 0 2.5px!important; 
+      margin-bottom:10px!important;
+    }
+    .swiper-pagination-bullet-active {  
+        width: 16px;
+        height: 8px; 
+        border-radius: 6px;
+    }  
+}
+
+
+
+.profile-header{ 
+    ion-col:last-child{
+        p{
+            margin: 4px 0px;
+        }
+        p:first-child{
+            font-family: 'Maven Pro';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px; 
+            letter-spacing: 0.01em; 
+            color: #333537;
+        }
+        p:last-child{
+            img{
+                margin-right: 4px;
+            }
+            img:last-child{
+                margin-top: 4px;
+                margin-left: 4px;
+            }
+            span{
+                font-family: 'Maven Pro';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px; 
+                letter-spacing: 0.01em; 
+                color: #2385C8;
+            }
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.membership{
+    padding: 0 .75rem;
+    .bg-blue{
+        border-radius: 16px;
+        box-shadow: 0 1px 6px #33353733;
+    }
+    .logo{
+        position: absolute;
+        width: 96px;
+        left: 0.75rem;
+        top: 3vh;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    ion-row{ 
+        position: absolute;
+        bottom: 0.5rem;
+        left: 1.5rem;
+        ion-col{
+             padding: 10px 0px;
+        }
+        p{
+            margin: 0;
+            font-family: 'Maven Pro';
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.01em; 
+            color: #FDFEFF;
+            span{
+                vertical-align: middle;
+            }
+            img{
+                margin-left: 8px;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+        }
+        p:first-child{
+            font-size: 18px; 
+        } 
+    }
+}
+.line-border{
+    background: #FDFEFF; 
+    border: 1px solid #F2F2F2;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    border-radius: 8px;
+    ion-item{
+        --min-height:56px;
+        margin-left: 8px; 
+        margin-right: 8px; 
+        --padding-start: 0px;
+        --inner-padding-start: 0px;
+        --padding-end: 0px;
+        --inner-padding-end: 0px;
+    }
+    ion-item:not(:last-child){
+        border-bottom: 1px solid #F2F2F2;
+    }
+}
+.logout-btn{
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px; 
+    color: #F33C45;
+    mix-blend-mode: normal; 
+}
+.version{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.01em; 
+    color: #7A7B7C;
+}
+ion-list{
+    padding:0;
+}
+.img-barcode{ 
+    position: absolute;
+    right: 0;
+    padding: 10px 10px 6px 10px;
+    background: #FFF;
+    border-radius: 8px;
+    margin-right: 24px;
+    margin-top: 10px;
+    
+}

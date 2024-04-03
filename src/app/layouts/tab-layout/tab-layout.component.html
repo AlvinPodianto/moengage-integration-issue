@@ -1,0 +1,20 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <!-- Tab Item -->
+    <ion-tab-button *ngFor="let item of tabContents;index as i" [tab]="item.url" (click)="setActiveIndex(i)"
+      [routerLink]="[item.url == 'home' ? '' : '/'+item.url]">
+
+      <!-- Tab Badge -->
+      <span class="tab-badge" *ngIf="item?.hasBadge && item?.badgeValue">{{ item?.badgeValue }}</span>
+
+      <!-- Icon warning -->
+      <ion-icon *ngIf="item?.hasWarning" class="icon-warning" name="alert-circle"></ion-icon>
+
+      <!-- Tab image -->
+      <ion-icon [src]="activeIndex == i ? item.img : item.imgInactive"></ion-icon>
+      
+      <!-- Tab label -->
+      <ion-label [color]="activeIndex == i ? 'primary' : 'medium'">{{ item.title }}</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

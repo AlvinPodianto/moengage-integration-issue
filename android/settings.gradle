@@ -1,0 +1,16 @@
+include ':app'
+include ':capacitor-cordova-android-plugins'
+project(':capacitor-cordova-android-plugins').projectDir = new File('./capacitor-cordova-android-plugins/')
+
+apply from: 'capacitor.settings.gradle'
+
+dependencyResolutionManagement {
+  repositories {
+    mavenCentral()
+  }
+  versionCatalogs {
+    create("moengage") {
+      from("com.moengage:android-dependency-catalog:4.1.2")
+    }
+  }
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "images":"1.svg",
+        "title":"TOP Official Store Award 2020 - 2021" 
+    },
+    {
+        "id": 1,
+        "images":"2.svg",
+        "title":"Memiliki 3 Apotek Fisik Sekitar Jakarta"
+    },
+    {
+        "id": 2,
+        "images":"3.svg",
+        "title":"Dipercaya lebih dari 25.000 konsumen setia"
+    },
+    {
+        "id": 3,
+        "images":"4.svg",
+        "title":"Lebih dari 5.000 Produk dan Terus Bertambah"
+    },
+    {
+        "id": 4,
+        "images":"5.svg",
+        "title":"Lebih dari 25.000 Penjualan Setiap Bulannya"
+    }
+]

@@ -1,0 +1,13 @@
+  <div class="no-result-outer ion-text-center">
+    <div class="img-not-found">
+      <img width="auto" height="auto" [src]="imgUrl" [ngStyle]="imgStyle" alt="Produk yang dicari tidak ditemukan" />
+    </div>
+    <p class="failed-title">{{title}}</p>
+    <p class="failed-text"><span>{{text}}</span></p>
+
+    <ion-button *ngIf="button && !isCustomAction" class="srx-button m-0" [ngClass]="buttonClass" [href]="link">
+      {{button}}
+    </ion-button>
+
+    <ng-content *ngIf="isCustomAction && !button"></ng-content>
+  </div> 

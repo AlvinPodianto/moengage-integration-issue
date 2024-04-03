@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border srx-shadow">
+  <ion-toolbar> 
+    <ion-title color="dark" class="maven-font medium-text font-weight-bold"><h4>{{ title }}</h4></ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" class='backButton' (click)="onModalDismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon> 
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid class="p-0">
+        <ion-row>
+        <ion-col size="12">
+            <ion-list>  
+                <!--tvlk <ion-item href="https://{{isPartner ? 'web' : 'api'}}.whatsapp.com/send?phone=6281216001600&text=Halo Farmaku" target="popup" rel="nofollow"> -->
+                <ion-item href="https://api.whatsapp.com/send?phone=6281216001600&text=Halo Farmaku" target="popup" rel="nofollow">
+                <ion-text class="icon-caption" slot="start">
+                    <img width="auto" height="auto" src="../../../assets/svg/wa-otp.svg" alt="Whatsapp Icon">
+                </ion-text>
+                <ion-label> 
+                    <p class="title">WhatsApp</p>
+                    <p class="custom-text">0812 1600 1600</p>
+                </ion-label> 
+                </ion-item>   
+            <ion-item href="mailto:info@farmaku.com" target="popup" rel="nofollow">
+                <ion-text class="icon-caption" slot="start">
+                <img width="auto" height="auto" src="../../../assets/svg/email-orange.svg" alt="Email Icon">
+                </ion-text>
+                <ion-label> 
+                <p class="title">Email</p>
+                <p class="custom-text">info@farmaku.com</p>
+                </ion-label> 
+            </ion-item>   
+            </ion-list> 
+        </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

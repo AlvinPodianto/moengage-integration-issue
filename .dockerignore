@@ -1,0 +1,6 @@
+e2e/
+www/
+node_modules/
+.git
+.gitignore
+.scannerwork/

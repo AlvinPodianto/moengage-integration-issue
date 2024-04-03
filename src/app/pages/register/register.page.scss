@@ -1,0 +1,52 @@
+ion-row {
+    ion-col:first-child {
+        padding-top: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        p {
+            color: #838588;
+            font-family: Roboto;
+            font-size: 14px;
+            letter-spacing: 0.14px;
+        }
+
+        h5 {
+            color: #333537; 
+            font-family: Maven Pro;
+            font-size: 16px; 
+            font-weight: 700; 
+            letter-spacing: 0.16px; 
+            a{
+                float: right;
+            }
+        }
+    }
+
+    ion-col {
+        padding: 0;
+    }
+}
+ion-footer{
+    position: initial;
+    background: #fff;
+    p{
+        padding: 16px 16px; 
+        font-size: 14px;
+        line-height: 20px;
+        color: #838588;
+        margin: 0;
+    }
+}
+p,
+h5 {
+    margin: 4px 0;
+}
+a{
+    color: #F77E21; 
+    font-family: Maven Pro;
+    font-size: 14px; 
+    font-weight: 700; 
+    letter-spacing: 0.14px;
+    text-decoration: none;
+}

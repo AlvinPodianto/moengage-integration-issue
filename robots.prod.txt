@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: */search?*
+Disallow: */search*
+Disallow: /login 
+Disallow: */shipping* 
+Disallow: */cart*
+Disallow: */cart-page*
+Disallow: /payment
+Disallow: */checkout*
+
+Sitemap: https://www.farmaku.com/sitemap.xml

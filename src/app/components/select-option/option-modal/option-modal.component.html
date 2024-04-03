@@ -1,0 +1,10 @@
+<srx-header [title]="title" [isModal]="true" (onModalDismiss)="onModalDismiss()"></srx-header>
+
+<ion-content>
+  <ion-radio-group [(ngModel)]="selectedOption" (ionChange)="onChangeselect($event)">
+    <ion-item *ngFor="let option of options">
+      <ion-label>{{option.name}}</ion-label>
+      <ion-radio slot="end" [value]="option"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-content>

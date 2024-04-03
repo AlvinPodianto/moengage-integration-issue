@@ -1,0 +1,162 @@
+<srx-header 
+  title="Filter" 
+  [isModal]="true" 
+  (onModalDismiss)="onModalDismiss()" 
+  [isActionButton]="true" 
+  actionButtonTitle="Reset" 
+  (onActionClicked)="resetFilterHandler()">
+
+  <button draggable="true" 
+          (dragstart)="makeMeFullHandler()" 
+          class="puller" 
+          (click)="makeMeFullHandler()"
+          #puller>
+  </button>
+
+</srx-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Sort -->
+  <p class="filter-title">Urutkan</p>
+  <div class="filter-list">
+    <button 
+        class="filter-button" 
+        *ngFor="let item of sortItem; let i = index"
+        [class.active]="selectedSortIndex == i"
+        (click)="selectSortHandler(i)">
+        {{item.name}}
+    </button>
+  </div>
+
+  <!-- Promosi -->
+  <p class="filter-title" *ngIf="promoItems?.length > 0">Promosi</p>
+  <div class="filter-list" *ngIf="promoItems?.length > 0">
+    <button 
+        class="filter-button" 
+        *ngFor="let item of promoItems"
+        [class.active]="isPromoActive(item.name)"
+        (click)="selectPromoHandler($event, item.name)">
+        {{item.name}}
+    </button>
+  </div>
+
+  <p class="filter-title">Penawaran</p>
+  <div class="filter-list">
+    <button *ngFor="let item of offerItem; let i = index"
+        class="filter-button"
+        [class.active]="selectedOfferIndex == item.id"
+        (click)="selectOfferHandler(item.id)">
+        {{item.name}}
+    </button> 
+  </div>
+
+  <!-- Kategori -->
+  <p class="filter-title" *ngIf="categoryItems?.length > 0">Kategori</p>
+  <div class="filter-list" *ngIf="categoryItems?.length > 0">
+    <button 
+        class="filter-button" 
+        *ngFor="let item of categoryItems"
+        [class.active]="isCategoryActive(item.name)"
+        (click)="selectCategoryHandler($event, item.name)">
+        {{item.name}} ({{ item.totalItem }})
+    </button>
+  </div>
+
+  <p class="filter-title" *ngIf="brandItems?.length > 0">Brand</p>
+  <div class="filter-list" *ngIf="brandItems?.length > 0">
+    <button 
+        class="filter-button" 
+        *ngFor="let item of brandItems"
+        [class.active]="isBrandActive(item.name)"
+        (click)="selectBrandHandler($event, item.name)">
+        <img width="auto" height="auto" [src]="item?.iconUrl ? item.iconUrl : '../../../../assets/images/default-img.png'" [alt]="item?.iconUrl ? item.name : '../../../../assets/images/default-img.png'" onerror="this.onerror=null;this.src='../../../../assets/images/default-img.png'" class="filter-img" />
+        {{item.name}}
+    </button>
+  </div>
+
+  <p class="filter-title">Jenis Produk</p>
+  <div class="filter-list">
+    <button 
+        class="filter-button"
+        [class.active]="isPrescription == null"
+        (click)="selectPrescriptionHandler(null)">
+        Semua
+    </button>
+    <button 
+        class="filter-button"
+        [class.active]="isPrescription"
+        (click)="selectPrescriptionHandler(true)">
+        Obat Resep
+    </button>
+    <button 
+        class="filter-button"
+        [class.active]="isPrescription==false"
+        (click)="selectPrescriptionHandler(false)">
+        Obat Bebas
+    </button>
+  </div>
+
+  <!-- <p class="filter-title">Rekomendasi Untukmu</p>
+  <div class="filter-list">
+    <button 
+        class="filter-button"
+        [class.active]="isRecomended == null"
+        (click)="selectRecomendedHandler(null)">
+        Semua
+    </button>
+    <button 
+        class="filter-button"
+        [class.active]="isRecomended"
+        (click)="selectRecomendedHandler(true)">
+        Paling direkomendasi
+    </button>
+  </div> -->
+  
+  <!-- Price Range -->
+  <p class="filter-title">Batas Harga</p>
+  <div class="filter-list ion-align-items-center">
+    <ion-input placeholder="Harga Minimal" class="price-input" type="number" inputmode="number" [(ngModel)]="minPrice" autocomplete="off" min="0" (change)="hasAnyFilterAct=true"></ion-input>
+    <div class="strip"></div>
+    <ion-input placeholder="Harga Maksimal" class="price-input" type="number" inputmode="number" [(ngModel)]="maxPrice" autocomplete="off" min="0" (change)="hasAnyFilterAct=true"></ion-input>
+  </div>
+
+  <div class="filter-list price-filter">
+    <button [class.active]="minPrice == 0 && maxPrice == 75000" class="filter-button" (click)="setPrice(0, 75000)">0 - 75 rb</button>
+    <button [class.active]="minPrice == 75000 && maxPrice == 150000" class="filter-button" (click)="setPrice(75000, 150000)">75 rb - 150 rb</button>
+    <button [class.active]="minPrice == 150000 && maxPrice == 200000" class="filter-button" (click)="setPrice(150000, 200000)">150 rb - 200 rb</button>
+  </div>
+  <!-- Penilaian -->
+  <p class="filter-title">Penilaian</p>
+  <div class="filter-list">
+    <button 
+        class="filter-button" 
+        *ngFor="let item of ratingItem; let i = index"
+        [class.active]="selectedRatingIndex == item.value"
+        (click)="selectRatingHandler(item.value)">
+        {{item.name}}
+    </button>
+  </div>
+  
+  <!-- Pengiriman -->
+  <!-- <p class="filter-title">Pengiriman</p>
+  <div class="filter-list">
+    <button class="filter-button" (click)="selectItem($event)">Instant</button>
+    <button class="filter-button active" (click)="selectItem($event)">Same Day</button>
+    <button class="filter-button">Next Day</button>
+    <button class="filter-button">Reguler</button>
+  </div> -->
+  
+</ion-content>
+
+<ion-footer *ngIf="isFilterFilled() || hasAnyFilterAct" class="ion-no-border srx-shadow">
+  <ion-toolbar>
+    <ion-button 
+      expand="block" 
+      fill="solid" 
+      class="srx-button"
+      (click)="onSubmit()">
+      Terapkan
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

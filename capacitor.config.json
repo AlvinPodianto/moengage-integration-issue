@@ -1,0 +1,26 @@
+{
+  "appId": "com.farmaku.app",
+  "appName": "Farmaku",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "launchShowDuration": 1000
+    },
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    },
+    "CapacitorCookies": {
+      "enabled": true
+    }
+  },
+  "cordova": {},
+  "iosClientId": "com.farmaku.aoo",
+  "clientId": "com.farmaku.app",
+  "server": {
+    "hostname":"http://localhost/",
+    "androidScheme": "http"
+  }
+}

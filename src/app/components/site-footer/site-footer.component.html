@@ -1,0 +1,111 @@
+<ion-grid class="pt-3 pb-0 px-3" *ngIf="!platform.is('capacitor')">
+  <ion-row>
+    <ion-col size="6" class="flex-center justify-content-start">
+      <img class="farmaku-icon" src="../../../assets/images/home/farmaku-logo-white.svg" alt="farmaku-icon">
+    </ion-col>
+    <ion-col size="6" class="flex-center justify-content-end">
+      <ion-button fill="outline" color="snow-white" size="small" class="srx-button btn-small mt-0 mr-0"
+        (click)="openContactModal()">
+        Hubungi Kami
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid class="p-3 pt-2" *ngIf="!platform.is('capacitor')">
+  <ion-row>
+    <ion-col size="12">
+      <h4>Dapatkan Aplikasi Farmaku</h4>
+      <a target="popup" rel="nofollow" href="{{contactInfo?.linkAppAndroid}}">
+        <img width="136" height="auto" src="../../../../assets/images/download-app/google-play.png"
+          alt="Play Store Logo" rel="nofollow"></a>
+      <a class="ml-2" target="popup" rel="nofollow" href="{{contactInfo?.linkAppIos}}">
+        <img width="auto" height="auto" src="../../../../assets/images/home/applestore.svg" alt="Apple Store Logo"
+          rel="nofollow">
+      </a>
+    </ion-col>
+    <ion-col size="12">
+      <h4>Ikuti Kami</h4>
+      <ul class="follow-list mt-2">
+        <li><a href="{{contactInfo?.linkFacebook}}" rel="nofollow" target="_blank"><img width="auto"
+              height="auto" src="../../../../assets/images/home/facebook.svg" alt="facebook farmaku"></a></li>
+        <li><a href="{{contactInfo?.linkTwitter}}" rel="nofollow" target="_blank"><img width="auto" height="auto"
+              src="../../../../assets/images/home/twitter.svg" alt="twitter farmaku"></a></li>
+        <li><a href="{{contactInfo?.linkInstagram}}" rel="nofollow" target="_blank"><img width="auto"
+              height="auto" src="../../../../assets/images/home/instagram.svg" alt="instagram farmaku"></a></li>
+        <li><a href="{{contactInfo?.linkTikTok}}" rel="nofollow" target="_blank"><img width="auto" height="auto"
+              src="../../../../assets/images/home/tiktok.svg" alt="tiktok farmaku"></a></li>
+        <li><a href="{{contactInfo?.linkThreads}}" rel="nofollow" target="_blank"><img width="auto" height="auto"
+              src="../../../../assets/images/home/threads.svg" alt="threads farmaku"></a></li>
+      </ul>
+    </ion-col>
+    <ion-col size="12">
+      <h4>Customer Service</h4>
+      <ul class="list-none mb-li list-partner">
+        <!-- <li><img width="auto" height="auto" src="../../../../assets/images/home/phone.svg">(021) 29324225</li> -->
+        <li class="d-block"><a href="mailto:{{contactInfo?.email}}" target="popup" rel="nofollow">
+            <img width="auto" height="auto" src="../../../../assets/images/home/email.svg"
+              alt="alamat email farmaku">{{contactInfo?.email}}</a> &nbsp; &nbsp;| &nbsp; &nbsp;
+          <a href="https://api.whatsapp.com/send?phone={{contactInfo?.whatsAppCustomerService}}&text=Halo Farmaku" target="popup" rel="nofollow">
+            <img width="auto" height="auto" src="../../../../assets/images/home/whatsapp.svg"
+              alt="kontak farmaku via whatsapp">{{(contactInfo?.whatsAppCustomerService)?.replace('+62 ', '0')}}</a>
+
+        </li>
+        <li class="d-block h-partner">
+          <img class="m-cstm" width="auto" height="auto" src="../../../../assets/images/home/headphone.svg"
+            alt="kontak farmaku via whatsapp">
+          <a href="https://api.whatsapp.com/send?phone={{item}}&text=Halo Farmaku" target="popup" rel="nofollow"
+            *ngFor="let item of contactInfo?.whatsAppTelesales;let i=index;">
+            {{item?.replace('62', '0')}} <span *ngIf="i+1 < contactInfo?.whatsAppTelesales.length">/</span>
+          </a>
+        </li>
+        <li class="mb-li">Jam Operasional <span class="font-weight-bold ml-2">08:00 - 22:00 WIB</span></li>
+      </ul>
+    </ion-col>
+    <!-- <ion-col size="12" class="telesales">
+      <h4>Telesales Kami</h4>
+      <ion-row class="telesales-list">
+        <ion-col size="5" *ngFor="let item of contactInfo?.whatsAppTelesales;let i=index;">
+          <img width="auto" height="auto" src="../../../../assets/images/home/headphone.svg"
+            alt="kontak farmaku via whatsapp">
+          <a href="https://api.whatsapp.com/send?phone={{item}}&text=Halo Farmaku" target="popup" rel="nofollow">
+            {{item}} </a>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="12" class="no-partner">
+      <h4>Tentang</h4>
+      <ul class="about-list">
+        <li><a href="/pusat-bantuan/tentang-kami">Tentang Farmaku.com</a></li>
+        <li><a href="/pusat-bantuan/pengiriman">Pengiriman</a></li>
+        <li><a href="/pusat-bantuan/pengembalian">Pengembalian</a></li>
+        <li><a href="/pusat-bantuan/syarat-ketentuan">Syarat & Ketentuan</a></li>
+        <li><a href="/pusat-bantuan/kebijakan-privasi">Kebijakan Privasi</a></li>
+        <li><a href="/pusat-bantuan/faq">FAQ</a></li>
+      </ul>
+    </ion-col>
+    <ion-col size="12" class="no-partner">
+      <h4>Layanan Konsumen</h4>
+      <ul class="about-list">
+        <li><a href="/login">Masuk</a></li>
+        <li><a href="/login">Daftar</a></li>
+        <li><a href="/pusat-bantuan/cara-pembayaran">Cara Pembayaran</a></li>
+        <li><a href="/aplikasi-farmaku">Aplikasi Farmaku</a></li>
+        <li><a href="/pusat-bantuan/konfirmasi-pembayaran">Konfirmasi Pembayaran</a></li> 
+      </ul>
+    </ion-col> -->
+    <ion-col size="12" class="my-3 mx-0">
+      <ul class="partner-about-list">
+        <li><a href="/pusat-bantuan">Pusat Bantuan</a></li>
+        <li><a href="/pusat-bantuan/tentang-kami">Tentang Farmaku</a></li>
+        <li><a href="/aplikasi-farmaku">Aplikasi Farmaku</a></li>
+        <!-- <li><a href="/pusat-bantuan/cara-pembayaran">Cara Pembayaran</a></li> -->
+        <li><a href="/pusat-bantuan/farmapoints">FarmaPoints</a></li>
+        <li><a href="/pusat-bantuan/syarat-ketentuan">Syarat & Ketentuan</a></li>
+        <li><a href="/pusat-bantuan/kebijakan-privasi">Kebijakan Privasi</a></li>
+      </ul>
+    </ion-col>
+    <ion-col size="12">
+      <p class="footer-copyright">© All rights reserved. 2023 Farmaku.com</p>
+    </ion-col>
+  </ion-row>
+</ion-grid>

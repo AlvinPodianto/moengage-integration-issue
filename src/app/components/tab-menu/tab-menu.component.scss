@@ -1,0 +1,61 @@
+.tab-menu{
+    display: flex;
+    background-color: #FFF;
+
+    ion-button{
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: capitalize;
+        letter-spacing: 0.2px;
+        margin: 0;
+        color:var(--ion-color-dark);
+        border-bottom: 1px solid;
+        border-color: var(--ion-color-divider);
+        width: 100%;
+        --padding-top:1rem;
+        --padding-bottom:1rem;
+        height: 44px;
+        font-family: 'Maven Pro', sans-serif;
+        --ion-font-family: "Maven Pro", sans-serif;
+        font-weight: 700;
+
+        &.active{
+            color:var(--ion-color-primary);
+            text-transform: capitalize;
+            border-bottom: 2px solid;
+        }
+    }
+}
+
+.tab-vertical{
+    display: flex;
+    background-color: #FFF;
+    height: 100%; 
+    flex-direction: column;
+    justify-content: center;
+    width: 15%;
+
+    ion-button{
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: capitalize;
+        letter-spacing: 0.2px;
+        margin: 0;
+        color:var(--ion-color-dark);
+        border-bottom: 1px solid;
+        border-color: var(--ion-color-divider);
+        width: 100%;
+        --padding-top:1rem;
+        --padding-bottom:1rem;
+        height: 44px;
+        font-family: 'Maven Pro', sans-serif;
+        --ion-font-family: "Maven Pro", sans-serif;
+        font-weight: 700;
+
+        &.active{
+            color:var(--ion-color-primary);
+            text-transform: capitalize;
+            border-bottom: 2px solid;
+        }
+    }
+} 

@@ -1,0 +1,57 @@
+<srx-header title="Daftar" [ableBack]="true">
+</srx-header>
+
+<ion-content *ngIf="registerType!=null">
+  <ion-row>
+    <ion-col size="12" *ngIf="registerType == 'phone'">
+      <p>Daftar dengan <span>nomor ponsel</span>
+      </p>
+      <h5>{{ toPhoneNumberStr(userRegister?.phone) }} <a (click)="navigationService.back()">Ubah</a></h5>
+    </ion-col>
+
+    <ion-col size="12" *ngIf="registerType == 'email'">
+      <p>Daftar dengan <span>email</span>
+      </p>
+      <h5>{{ userRegister?.email }}</h5>
+    </ion-col>
+
+    <ion-col size="12">
+      <srx-input-text label="Nama Lengkap" (onKeyUp)="onTypeInput()" [isValid]="isInputValid" name="fullname"
+        [(inputModel)]="userRegister.name">
+      </srx-input-text>
+      
+      <srx-input-text *ngIf="registerType =='email'" label="Nomor Ponsel" inputType="tel" name="phone"
+        (onKeyUp)="onTypeInputPhone($event)" (paste)="onPasteInputPhone($event)"
+        [isValid]="isPhoneValid && isInputValid" [infoMessage]="phoneErrorInfo"
+        [inputModel]="userRegister.phone">
+      </srx-input-text>
+
+      <srx-input-password label="Kata Sandi" [(inputModel)]="userRegister.password" [infoMessage]="passwordErrorInfo" name="password"
+        (onModelChange)="onTypePasswordValidation()" [isValid]="isPasswordValid && isInputValid">
+      </srx-input-password>
+
+      <srx-input-password label="Ulangi Kata Sandi Baru" [(inputModel)]="passwordVerify" name="confirmPassword"
+        [infoMessage]="rePasswordErrorInfo" (onModelChange)="onTypePasswordValidation()"
+        [isValid]="isRePasswordValid && isInputValid">
+      </srx-input-password>
+      <!-- <ion-card class="mx-3 mt-4 bg-blue"><ion-card-content><p color="dark" class="font-weight-bold">Kode Referral</p><p color="dark-tint" class="mb-3 cpcaption"><span>
+                    Dapatkan bonus point reward dengan memasukan kode
+                    referral teman kamu.</span></p><ion-input class="form-textbox" color="dark" type="text" placeholder="Masukkan Kode Referral"
+                    [(ngModel)]="userRegister.referralCode"></ion-input></ion-card-content></ion-card> -->
+      <!-- <ion-button color="primary" expand="block" fill="solid" class="srx-button mt-5" [disabled]="isBtnDisabled" (click)="onSubmit()"> Daftar </ion-button> -->
+
+      <check-button class="mt-5" name="btnRegistationNext" [input]="userRegister?.phone" [isDisable]="validationInputCheck()"
+        [keyEnter]="onKeyEnter" (onSubmit)="onSubmit($event)">
+      </check-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <p>
+    <span>Dengan mendaftar Anda menyetujui <br>
+      <a href="https://www.farmaku.com/pusat-bantuan/syarat-ketentuan">Kebijakan Privasi dan Syarat</a> & <a
+        href="https://www.farmaku.com/pusat-bantuan/syarat-ketentuan">Ketentuan kami.</a>
+    </span>
+  </p>
+</ion-footer>

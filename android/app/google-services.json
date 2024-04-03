@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "797917871938",
+    "firebase_url": "https://rx-e503f.firebaseio.com",
+    "project_id": "rx-e503f",
+    "storage_bucket": "rx-e503f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797917871938:android:7e8bb56dd9b3a7bc60d2db",
+        "android_client_info": {
+          "package_name": "com.farmaku.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797917871938-f3cm5393jgjof8tetq0qomg3dn3kd6oi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.farmaku.app",
+            "certificate_hash": "72f32f3b97570d2c626019fdd7672183df0d7071"
+          }
+        },
+        {
+          "client_id": "797917871938-oh5sqfum8es83bok6hipkkjcimidph10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChNj3V_kWcW7pPHPUL9cmByVpDSdb425M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797917871938-oh5sqfum8es83bok6hipkkjcimidph10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797917871938:android:a9ecbe8678356f0060d2db",
+        "android_client_info": {
+          "package_name": "com.farmaku.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797917871938-oh5sqfum8es83bok6hipkkjcimidph10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChNj3V_kWcW7pPHPUL9cmByVpDSdb425M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797917871938-oh5sqfum8es83bok6hipkkjcimidph10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

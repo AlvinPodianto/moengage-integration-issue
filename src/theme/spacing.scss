@@ -1,0 +1,61 @@
+
+@mixin simpleSpace {
+    // margin and padding values
+    $spacings: (
+        0: 0rem,
+        1: 0.25rem,
+        2: 0.5rem,
+        3: 1rem,
+        4: 1.5rem,
+        5: 3rem,
+        n1: -0.25rem,
+        n2: -0.5rem,
+        n3: -1rem,
+        n4: -1.5rem,
+        n5: -3rem,
+        auto: auto
+    ) !default;
+  
+    // margin and padding shorthand prefixes
+    $prefixes: (
+        p: padding,
+        px: (
+            padding-left,
+            padding-right
+        ),
+        py: (
+            padding-top,
+            padding-bottom
+        ),
+        pt: padding-top,
+        pr: padding-right,
+        pb: padding-bottom,
+        pl: padding-left,
+        m: margin,
+        mx: (
+            margin-left,
+            margin-right
+        ),
+        my: (
+            margin-top,
+            margin-bottom
+        ),
+        mt: margin-top,
+        mr: margin-right,
+        mb: margin-bottom,
+        ml: margin-left
+    ) !default;
+  
+    // Loop generating all spacing styles
+    @each $attr-short, $attr-list in $prefixes {
+        @each $space-short, $space-list in $spacings {
+            .#{$attr-short}-#{ $space-short } {
+                @each $attr in $attr-list {
+                    #{$attr}: #{$space-list} !important;
+                }
+            }
+        }
+    }
+}
+  
+@include simpleSpace();

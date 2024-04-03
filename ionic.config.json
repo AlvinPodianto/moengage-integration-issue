@@ -1,0 +1,7 @@
+{
+  "name": "Farmaku.UI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

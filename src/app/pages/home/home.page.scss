@@ -1,0 +1,100 @@
+home-header{
+    display: block;
+    width: 100%;
+    z-index: 9999;
+}
+
+home-slider{
+    display: block;
+    width: 100%;
+}
+
+category-slider{
+    display: block;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+pharma-features{
+    display: block;
+    width: 100%;
+}
+
+flash-sale{
+    display: block;
+    width: 100%;
+    background: var(--ion-color-secondary);
+    margin-top: 0.5rem;
+}
+
+promo-slider{
+    display: block;
+    width: 100%; 
+    margin-bottom: 0;
+}
+brand-slider{ 
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+watermark-slider{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+article-slider{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.menu-title{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    
+    h3{
+        font-family: 'Maven Pro', sans-serif;
+        --ion-font-family: "Maven Pro", sans-serif;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    p{
+        font-family: 'Maven Pro', sans-serif;
+        --ion-font-family: "Maven Pro", sans-serif;
+
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        letter-spacing: 0.2px;
+        color:var(--ion-color-primary);
+        margin: 0;
+        cursor: pointer;
+    }
+    
+    a{
+        font-family: 'Maven Pro', sans-serif;
+        --ion-font-family: "Maven Pro", sans-serif;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        /* identical to box height, or 133% */
+        letter-spacing: 0.2px;
+        color:var(--ion-color-primary);
+        margin: 0;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+.new-user-images{
+    width: 100%;
+    border-radius: 8px;
+}

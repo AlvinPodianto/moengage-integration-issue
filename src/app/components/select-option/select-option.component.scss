@@ -1,0 +1,97 @@
+.item-bordered{
+    .form-textbox{
+        border: 1px solid var(--ion-color-gray);
+        padding: 0.3rem 1rem !important;
+        border-radius: 8px 0 0 8px;
+        border-right: none;
+    }
+    
+    .item-has-focus .label-floating, .item-has-value .label-floating{
+        transform: translate(8px, 12px) scale(0.8) !important;
+        z-index: 100;
+        background: #fff;
+        max-width: fit-content;
+        color: var(--ion-color-gray);
+        padding: 0 5px;
+    }
+    
+    .label-floating.sc-ion-label-md-h {
+        -webkit-transform: translate(1rem,165%) !important;
+        transform: translate(1rem,165%) !important;
+    }
+    
+    .input-error{
+        border: 1px solid var(--ion-color-danger);
+        border-right: none;
+    }
+    
+    .label-error{
+        color: var(--ion-color-danger) !important;
+    }
+    
+    .show-button{
+        margin: 0;
+        margin-top: 1.2rem;
+        border: 1px solid var(--ion-color-gray);
+        border-left: none;
+        border-radius: 0 8px 8px 0;
+        box-sizing: content-box;
+        padding: 0.62rem 0;
+        padding-right: .3em;
+    }
+    
+    .show-button-error{
+        border: 1px solid var(--ion-color-danger);
+        border-left: none;
+    }
+}
+
+.item-highlight{
+    --highlight-color-valid:none;
+    --highlight-color-focused: none;
+    --background-focused: none;
+}
+
+.info-message{
+    font-size: 12px;
+    color: var(--ion-color-gray);
+    margin-top:4px;
+}
+
+.info-message-error{
+    color: var(--ion-color-danger);
+}
+
+
+
+.item-line{
+    .item-has-focus{
+        .show-button{
+            border-bottom: 1px solid var(--ion-color-primary); 
+        }
+    }
+    
+    .item-has-focus .label-floating, .item-has-value .label-floating{
+        color: var(--ion-color-gray);
+    }
+    .show-button{
+        margin: 0;
+        margin-top: .5rem;
+        box-sizing: content-box;
+        padding: 0.67rem 0;
+        padding-right: .3em;
+        border-bottom: 1px solid var(--ion-color-gray); 
+        ion-icon{
+            font-size: 14px;
+        }
+    }
+
+    .form-textbox{
+        border-bottom: 1px solid var(--ion-color-gray); 
+    }
+    
+    .has-focus{
+      border-bottom: 1px solid var(--ion-color-primary); 
+    }
+}
+

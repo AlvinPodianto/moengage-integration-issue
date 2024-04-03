@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 16" width="2" height="16">
+	<title>line-svg-svg</title>
+	<defs>
+		<image  width="2" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAQAgMAAABBxkYnAAAAAXNSR0IB2cksfwAAAAxQTFRF////934h934h934hwa6DswAAAAR0Uk5T/9j/1PyW71wAAAATSURBVHicY2CAggCGBUiwACYMAEdABIE63Jk9AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer" href="#img1" x="0" y="0"/>
+</svg>

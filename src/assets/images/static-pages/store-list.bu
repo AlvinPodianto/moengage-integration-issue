@@ -1,0 +1,236 @@
+[
+  {
+	"id": 1,
+    "title": "Apotek Farmaku Tomang",
+    "imageUrl": "../../../../assets/images/apotek/apotek-farmaku-tomang.png",
+    "location": "Jl. Mandala Raya No.28A, RT.1/RW.2, Tomang, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11440",
+    "map": "https://www.google.com/maps/place/Apotik+Farmaku/@-6.1753946,106.7985418,20z/data=!4m6!3m5!1s0x2e69f661981d8741:0x78154c73e3e37c5d!8m2!3d-6.175481!4d106.7985356!16s%2Fg%2F11hf1_bd4p",
+    "schedule": [
+      {
+        "day": "Minggu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Senin",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Selasa",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Rabu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Kamis",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Jumat",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Sabtu",
+        "time": "08:00 - 22:00"
+      }
+    ],
+    "shareLink": "apotek-farmaku-tomang",
+    "whatsapp": "6281112201603"
+  },
+  {
+	"id": 42,
+    "title": "Apotek Farmaku Asem Baris",
+    "imageUrl": "../../../../assets/images/apotek/apotek-farmaku-asem-baris.png",
+    "location": "Jl. Asem Baris Raya No. 37A, RT.4/RW.6, Kb. Baru, Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12830",
+    "map": "https://www.google.com/maps/place/Farmaku+-+Asem+Baris/@-6.234951,106.8578066,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f368183d24ad:0xbee57f0b1aa46d13!8m2!3d-6.234951!4d106.8599953",
+    "schedule": [
+      {
+        "day": "Minggu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Senin",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Selasa",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Rabu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Kamis",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Jumat",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Sabtu",
+        "time": "08:00 - 22:00"
+      }
+    ],
+    "shareLink": "apotek-farmaku-asem-baris",
+    "whatsapp": "6285900412953"
+  },
+  {
+	"id": 44,
+    "title": "Apotek Farmaku Bintaro Raya",
+    "imageUrl": "../../../../assets/images/apotek/apotek-farmaku-bintaro-raya.png",
+    "location": "Jl. Bintaro Raya No. 3A RT 1 RW 10 Kel. Kebayoran Lama Selatan, Kec. Kebayoran Lama Jakarta Selatan 12240",
+    "map": "https://www.google.com/maps/place/Farmaku+-+Bintaro+Raya/@-6.2535775,106.7768459,15z/data=!4m5!3m4!1s0x0:0xc77a109ffa68760b!8m2!3d-6.2535775!4d106.7768459",
+    "schedule": [
+      {
+        "day": "Minggu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Senin",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Selasa",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Rabu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Kamis",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Jumat",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Sabtu",
+        "time": "08:00 - 22:00"
+      }
+    ],
+    "shareLink": "apotek-farmaku-bintaro-raya",
+    "whatsapp": "6287723988144"
+  },
+  {
+	"id": 45,
+    "title": "Apotek Farmaku Kelapa Gading Square",
+    "imageUrl": "../../../../assets/images/apotek/apotek-farmaku-kelapa-gading-square.png",
+    "location": "Mall Of Indonesia Rukan City Home, Jl. Boulevard Bar. Raya No.037, Daerah Khusus Ibukota Jakarta 14240",
+    "map": "https://www.google.com/maps/place/Farmaku+-+Kelapa+Gading+Square/@-6.1462831,106.8923912,15.21z/data=!4m12!1m6!3m5!1s0x2e69f5dea16bb91f:0xeeb926632fce9c11!2sFarmaku+-+Kelapa+Gading+Square!8m2!3d-6.1494579!4d106.8909577!3m4!1s0x2e69f5dea16bb91f:0xeeb926632fce9c11!8m2!3d-6.1494579!4d106.8909577",
+    "schedule": [
+      {
+        "day": "Minggu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Senin",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Selasa",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Rabu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Kamis",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Jumat",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Sabtu",
+        "time": "08:00 - 22:00"
+      }
+    ],
+    "shareLink": "apotek-farmaku-kelapa-gading-square",
+    "whatsapp": "6282123123662"
+  },
+  {
+	"id": 47,
+    "title": "Apotek Farmaku Tanjung Duren",
+    "imageUrl": "../../../../assets/images/apotek/apotek-farmaku-tanjung-duren.jpg",
+    "location": "Shop House Apartment Mediterania Garden Residences I, Tower Catelya, Unit C/GCF",
+    "map": "https://www.google.com/maps/place/Medit+1+Tower+C/@-6.1742644,106.7888374,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f73cc45e6ae7:0x52df2110bb950166!8m2!3d-6.1742644!4d106.7888374!16s%2Fg%2F11h3g9s5_h?hl=en-ID&entry=ttu",
+    "schedule": [
+      {
+        "day": "Minggu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Senin",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Selasa",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Rabu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Kamis",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Jumat",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Sabtu",
+        "time": "08:00 - 22:00"
+      }
+    ],
+    "shareLink": "apotek-farmaku-tanjung-duren",
+    "whatsapp": "6282140009338"
+  },
+  {
+	"id": 53,
+    "title": "Apotek Farmaku Banyumanik",
+    "imageUrl": "../../../../assets/images/apotek/apotek-farmaku-banyumanik.jpg",
+    "location": "Jln. Tirto Agung No.10D , Pedalangan, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50268",
+    "map": "https://maps.app.goo.gl/g67tgd9Gmdk7nu8P9?g_st=ic",
+    "schedule": [
+      {
+        "day": "Minggu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Senin",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Selasa",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Rabu",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Kamis",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Jumat",
+        "time": "08:00 - 22:00"
+      },
+      {
+        "day": "Sabtu",
+        "time": "08:00 - 22:00"
+      }
+    ],
+    "shareLink": "apotek-farmaku-banyumanik",
+    "whatsapp": "6282220553905"
+}
+]

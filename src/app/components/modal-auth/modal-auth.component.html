@@ -1,0 +1,160 @@
+<srx-header [title]="title" [ableBack]="step!=1 && !isModalPage" [isModalPage]="isModalPage"
+  (onModalDismiss)="dissmissHandler()">
+</srx-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Step 1 -->
+    <ion-row *ngIf="step==1 || step==1.5">
+      <ion-col size="12">
+        <ion-img class="farmaku-logo" src="../../../assets/images/farmaku.png" alt="Farmaku Logo"></ion-img>
+      </ion-col>
+
+      <ion-col size="12" class="login-form">
+        <ion-label *ngIf="step==1.5">{{registerType | titlecase}}</ion-label>
+        <srx-input-text *ngIf="step==1" label="Nomor Ponsel atau Email" infoMessage="Contoh: 08128128128"
+          [isValid]="isValid" [(inputModel)]="input" (paste)="onPaste($event)" (onKeyUp)="onTyped($event)"
+          (input)="onInput($event)" (change)="input=input.trim()" mode="login">
+        </srx-input-text>
+
+        <p *ngIf="step==1.5">{{input}}
+          <a (click)="clickLayer('clickChangeEmail', 'Change Email');step=1">Ubah</a>
+        </p>
+      </ion-col>
+
+      <ion-col size="12" *ngIf="step==1.5" class="login-form">
+        <srx-input-password label="Kata Sandi" [(inputModel)]="password" [isValid]="isValid" [infoMessage]="errorLabel"
+          (onKeyUp)="onTypedPw($event)">
+        </srx-input-password>
+
+        <a *ngIf="step==1.5 && hasPassword" (click)="clickLayer('clickForgotPass', 'Forgot Password');resetPw()">Lupa kata sandi</a>
+      </ion-col>
+
+      <ion-col size="12">
+        <check-button *ngIf="step==1" [input]="input" [isDisable]="isDisable" [keyEnter]="onKeyEnter"
+          (onSubmit)="onSubmit($event)">
+        </check-button>
+
+        <ion-button *ngIf="step==1.5" [color]="password.length ? 'primary' : 'medium'" expand="block" fill="solid"
+          class="srx-button" [disabled]="!password.length" (click)="doLogin()">
+          {{ !isLoading ? "Masuk" : "Mengirim"}}
+          <ion-spinner style="margin-left: 1rem;" *ngIf="isLoading"></ion-spinner>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="12" class="spacer" *ngIf="!platform.is('ios')">
+        <hr />
+        <span>Atau Dengan</span>
+        <hr />
+      </ion-col>
+
+      <ion-col size="12" class="socmed ion-text-center">
+
+        <div class="outer-gbtn">
+          <div id="gbtn2" *ngIf="!platform.is('capacitor')">
+          </div>
+        </div>
+
+        <ion-button (click)="signInWithGoogleNative()" *ngIf="platform.is('capacitor') && !platform.is('ios')"
+          class="google-btn" shape="round" fill="outline"><ion-img src="../../../assets/images/google.png"
+            alt="Google Logo"></ion-img>Login dengan Google
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <!-- End Step 1 -->
+
+    <!-- Step 2 -->
+    <ion-row *ngIf="step==2 && (otpMethods?.length>0||hasPassword)" class="card-list">
+      <ion-col size="12">
+        <p>Pilih salah satu metode dibawah ini untuk mendapatkan kode verifikasi OTP.</p>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-row *ngIf="otpMethods.includes('WA')" (click)="generateOtp('WA')">
+          <ion-col size="1.25">
+            <img src="../../../assets/svg/wa-otp.svg" alt="wa otp icon">
+          </ion-col>
+
+          <ion-col>
+            <p>WhatsApp</p>
+            <p>{{dPhone?.replace('62', '+62 ')}}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="otpMethods.includes('SMS')" (click)="generateOtp('SMS')">
+          <ion-col size="1.25">
+            <img src="../../../assets/svg/chat-otp.svg" alt="chat otp icon">
+          </ion-col>
+
+          <ion-col>
+            <p>SMS</p>
+            <p>{{dPhone?.replace('62', '+62 ')}}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="otpMethods.includes('EMAIL')"
+          (click)="generateOtp('EMAIL')">
+          <ion-col size="1.25">
+            <img src="../../../assets/svg/email-orange.svg" alt="email otp icon">
+          </ion-col>
+
+          <ion-col>
+            <p>Email</p>
+            <p>{{dEmail}}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="(token=='' || token == undefined || token == null) && hasPassword" (click)="step = 1.5">
+          <ion-col size="1.25">
+            <img src="../../../assets/svg/lock.svg" alt="lock otp icon">
+          </ion-col>
+
+          <ion-col>
+            <p>Kata Sandi</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <!-- EndStep 2 -->
+
+    <!-- Step 3 -->
+    <ion-row *ngIf="step == 3">
+      <ion-col size="12" class="otp-rq">
+        <ion-row>
+          <ion-col>
+            <p>Kode verifikasi OTP telah dikirimkan ke</p>
+            <p>{{method=='EMAIL'?dEmail:dPhone?.replace('62', '+62 ')}}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12" class="otp-padding">
+            <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+            <span *ngIf="!isValid" class="validation-error">{{ validationErrorMsg }}</span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12"> Kode tidak diterima? <a [ngClass]="(times==0 || bannedAccount) ? '': 'disabled'"
+              (click)="generateOtp(method);clickLayer('clickPhoneLoginResendOTP', 'Resend OTP')"> Kirim ulang kode
+            </a>
+            <span *ngIf="times>0">({{times}} Detik)</span>
+          </ion-col>
+
+          <ion-col size="12" class="spacer">
+            <hr />
+            <span>Atau</span>
+            <hr />
+          </ion-col>
+
+          <ion-col size="12">
+            <a (click)="step=2">Jika tidak menerima OTP, <br>
+              <strong class="other-method">Gunakan metode Login lain</strong>
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <!-- End Step 3 -->
+  </ion-grid>
+</ion-content>

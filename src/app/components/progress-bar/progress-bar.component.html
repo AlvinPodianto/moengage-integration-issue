@@ -1,0 +1,27 @@
+<!-- <div class="progress-bar">
+  <p>
+    Mohon tunggu {{ progressValue }}%
+  </p>  
+  <ion-progress-bar [value]="(progressValue/100)" color="secondary"></ion-progress-bar>
+</div> -->
+<ion-content>
+    <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <img class="upload-img" width="auto" height="auto" src="../../../assets/images/uploading.gif" alt="uploading"> 
+          </ion-col>
+          <ion-col size="12"> 
+            <ion-progress-bar [value]="(progressValue/100)" color="secondary"></ion-progress-bar> 
+          </ion-col>
+          <ion-col size="12"> 
+            <p class="progress-value">{{ progressValue }}%</p> 
+          </ion-col>
+          <ion-col size="12"> 
+            <p class="upload-content">Sedang mengunggah File</p> 
+          </ion-col>
+          <ion-col size="12" class="m-0"> 
+            <p class="upload-content">Harap tunggu</p> 
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

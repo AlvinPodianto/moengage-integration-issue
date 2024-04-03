@@ -1,0 +1,27 @@
+{
+  "loginOtpPhone": "087780079028",
+  "loginPassword": "Test123",
+  "registrationByPhoneData": {
+    "name": "Test Cypress Phone",
+    "phone": "0877800790201",
+    "password": "Test123"
+  },
+  "registrationByPhoneNVerifyData": {
+    "name": "Test Cypress Phone Verify",
+    "phone": "0877800790204",
+    "password": "Test123",
+    "email": "test-cypress-verif@gmail.com"
+  },
+  "registrationByEmailData": {
+    "name": "Test Cypress Email",
+    "phone": "0877800790202",
+    "email": "test-cypress@gmail.com",
+    "password": "Test123"
+  },
+  "registrationByGoogleData": {
+    "name": "Test Cypress Google",
+    "phone": "0877800790203",
+    "email": "no-reply@farmaku.com",
+    "googleRefreshToken": "1//04N5m5FCkjbowCgYIARAAGAQSNwF-L9Ir6c2eaXpLdaBx8f7FY-w81_1TulzD9j_L0nXRvLyFoB751rglZ7GXA8PrEVUd0I6_h5c"
+  }
+}

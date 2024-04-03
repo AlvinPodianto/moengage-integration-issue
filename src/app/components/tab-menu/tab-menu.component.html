@@ -1,0 +1,11 @@
+<div [class.tab-menu]="!isVertical" [class.tab-vertical]="isVertical">
+  <ion-button 
+      [color]="activeIndex == i ? 'primary':'medium'" 
+      fill="clear" 
+      expand="full"
+      *ngFor="let item of tabItems;let i = index"
+      [class.active]="activeIndex == i"
+      (click)="setTabState(i)">
+    {{ item.name }}
+  </ion-button>
+</div>

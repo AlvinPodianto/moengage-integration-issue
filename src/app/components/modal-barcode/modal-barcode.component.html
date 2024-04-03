@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border srx-shadow" *ngIf="title">
+  <ion-toolbar>
+    <ion-title color="dark" class="maven-font medium-text font-weight-bold"><h1>{{title}}</h1></ion-title>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="noscroll"> 
+  <ion-grid class="p-0">
+    <ion-row class="info-card" *ngIf="caption">
+      <ion-col size="1" class="p-0 ml-2 flex-center">
+        <ion-icon class="info-circle-yellows" src="../../../assets/svg/info-blue.svg"></ion-icon>
+      </ion-col> 
+      <ion-col class="normal-text ion-text-left my-3">
+        {{caption}}
+      </ion-col>  
+    </ion-row>  
+    <ion-row>
+      <ion-col size="12" class="ion-text-center mt-2"> 
+        <qrcode [cssClass]="'m-0'" [qrdata]="cardNumber" [margin]="0" [width]="140"></qrcode>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center" *ngIf="cardNumberDisplay"> 
+        <h2>{{cardNumberDisplay}}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center"> 
+        <ion-button 
+          color="primary" 
+          expand="block" 
+          fill="outline" 
+          class="srx-button mt-0" 
+          (click)="onClickEv(false)">
+          Tutup
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,40 @@
+<div [class.item-bordered]="borderStyle == 'rounded'" [class.item-line]="borderStyle == 'line'">
+  <ion-item class="item-highlight"  lines="none">
+    <ion-label position="floating" 
+      [style.color]="'var(--ion-color-'+labelColor+')'"
+      [class.label-error]="!isValid">
+      {{ label }}
+    </ion-label>
+
+    <ion-input
+      class="form-textbox" 
+      [readonly]="true"
+      [class.input-error]="!isValid"
+      [value]="selectedOption?.name"
+      autocomplete="off"
+      (ionFocus)="showSheet()">
+    </ion-input>
+    
+    <ion-button slot="end" 
+      fill="clear" 
+      [color]="!isValid ? 'danger':'medium'" 
+      class="show-button" 
+      [class.show-button-error]="!isValid"
+      (click)="showSheet()">
+      <ion-icon slot="icon-only" name="caret-down"></ion-icon>
+    </ion-button>
+
+    <span class="info-message"
+      [class.info-message-error]="!isValid" 
+      *ngIf="infoMessage.length">
+      {{infoMessage}}
+    </span>
+
+    <span class="info-message"
+      [class.info-message-error]="!isValid" 
+      *ngIf="errorMessage.length > 0 && !isValid">
+      {{errorMessage}}
+    </span>
+
+  </ion-item>
+</div>

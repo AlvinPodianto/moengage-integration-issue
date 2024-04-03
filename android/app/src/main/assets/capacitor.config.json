@@ -1,0 +1,33 @@
+{
+	"appId": "com.farmaku.app",
+	"appName": "Farmaku.UI",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 1000,
+			"launchAutoHide": true,
+			"backgroundColor": "#ffffff",
+			"androidSplashResourceName": "splash",
+			"androidScaleType": "CENTER_CROP",
+			"androidSpinnerStyle": "large",
+			"showSpinner": true,
+			"iosSpinnerStyle": "small",
+			"spinnerColor": "#999999"
+		},
+		"GoogleAuth": {
+			"scopes": [
+				"profile",
+				"email"
+			],
+			"serverClientId": "797917871938-oh5sqfum8es83bok6hipkkjcimidph10.apps.googleusercontent.com",
+			"forceCodeForRefreshToken": true
+		},
+		"CapacitorCookies": {
+			"enabled": true
+		}
+	},
+	"android": {
+		"flavor": "stg"
+	}
+}

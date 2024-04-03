@@ -1,0 +1,77 @@
+h6 {
+	font-weight: bold;
+	color: #333537;
+	margin: 0 0 7.5px 0px;
+}
+
+p {
+	font-size: 10px;
+	color: var(--ion-color-gray-tint);
+}
+
+ion-card {
+	margin-inline: 16px;
+	box-shadow: 0px 1px 6px rgba(51, 53, 55, 0.2);
+	border-radius: 8px;
+}
+
+ion-card-content {
+	padding-top: 19.25px;
+	padding-bottom: 19.25px;
+}
+
+.cs-card,
+.pharmacy-card,
+.doctor-card {
+	cursor: pointer;
+
+	img {
+		width: 172px;
+		height: 100%;
+		position: absolute;
+		z-index: 0;
+		display: block;
+		top: 0;
+		right: 0;
+	}
+
+	p {
+		width: 130px
+	}
+}
+
+.menu-title {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	margin-top: 0.5rem;
+
+	h6 {
+		font-family: 'Maven Pro', sans-serif;
+		--ion-font-family: 'Maven Pro', sans-serif;
+		font-size: 16px;
+		line-height: 16px;
+		letter-spacing: 0.2px;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	a {
+		font-family: 'Maven Pro', sans-serif;
+		--ion-font-family: 'Maven Pro', sans-serif;
+
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 16px;
+		text-decoration: unset;
+		letter-spacing: 0.2px;
+		color: var(--ion-color-primary);
+		margin: 0;
+		cursor: pointer;
+	}
+}
+
+.mb-custom {
+	margin-bottom: 16px;
+}

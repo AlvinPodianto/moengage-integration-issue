@@ -1,0 +1,41 @@
+<srx-header [title]="title" [isModal]="true" (onModalDismiss)="onModalDismiss()"></srx-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item *ngIf="!isHtml">
+      <ion-text class="ion-text-center">
+        {{message}}
+      </ion-text>
+    </ion-item>
+
+    <ion-item *ngIf="isHtml">
+      <ion-text class="ion-text-center" [innerHtml]="message">
+      </ion-text>
+    </ion-item>
+
+    <span *ngIf="!isRadiusButton">
+      <ion-button color="primary" expand="block" fill="clear" class="srx-button" (click)="onClickEv(true)">
+        {{ OKText }}
+      </ion-button>
+
+      <ion-button color="primary" expand="block" fill="solid" class="srx-button" *ngIf="cancelText"
+        (click)="onClickEv(false)">
+        {{ cancelText }}
+      </ion-button>
+    </span>
+
+    <ion-row *ngIf="isRadiusButton">
+      <ion-col size="6">
+        <ion-button color="primary" expand="block" fill="outline" class="farmaku-btn" (click)="onClickEv(true)">
+          {{ OKText }}
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button color="primary" expand="block" fill="solid" class="farmaku-btn" *ngIf="cancelText"
+          (click)="onClickEv(false)">
+          {{ cancelText }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

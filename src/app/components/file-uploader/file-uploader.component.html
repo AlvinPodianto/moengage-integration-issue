@@ -1,0 +1,13 @@
+<ion-row class="image-list"> 
+	<ion-col size="2"> 
+		<input type="file" class="d-none" accept="image/*" #fileInput id="cameraInput" name="fileInput" (change)="addToQueue()" multiple>
+		<img (click)="fileInput.click()" src="../../../assets/svg/upload-review.svg" class="images-upload">
+	</ion-col> 
+	<ion-col size="2" *ngFor="let item of queue | async"> 
+		<ion-icon class="remove-icon" name="close-circle" color="primary" (click)="item?.remove()"></ion-icon>
+		<img class="images-upload" [src]="item?.file?.imgUrl" [alt]="item?.file?.imgUrl" [srcset]="item?.file?.imgUrl">   
+		<p>
+			<span> <circle-progress [progress]="item?.progress"></circle-progress></span>
+		</p>
+	</ion-col> 
+</ion-row>

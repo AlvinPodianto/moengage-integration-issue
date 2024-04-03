@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.farmaku.app",
+      "sha256_cert_fingerprints": [
+        "2D:2F:47:22:96:AB:9F:47:D0:2B:8D:3B:20:F4:62:E8:A8:25:7D:6E:20:13:3D:A3:3F:CF:4F:59:46:94:DD:4E",
+        "F7:AF:3B:35:47:A9:94:35:39:EF:DE:9D:C2:2A:03:83:D8:2C:35:80:05:83:3E:23:E1:6B:EB:BE:DB:04:4A:02"
+      ]
+    }
+  }
+]

@@ -1,0 +1,25 @@
+<srx-header title="" [isModal]="true" (onModalDismiss)="onModalDismiss()"></srx-header>
+
+
+<ion-content>
+	<ion-list lines="none">
+		<div style="margin: 0 1rem;">
+			<h4 class="font-weight-bold">{{ username }}</h4>
+		</div>
+
+		<div style="margin: 0 1rem;">
+			<span class="caption">{{ captionTitle[type].caption1 }}</span>
+			<br>
+			<span class="caption">{{ captionTitle[type].caption2 }}</span>
+		</div>
+
+	</ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-list>
+		<ion-button name="btnRegister" color="primary" expand="block" fill="solid" class="srx-button" (click)="doRegister()">
+			Daftar
+		</ion-button>
+	</ion-list>
+</ion-footer>

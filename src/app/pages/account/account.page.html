@@ -1,0 +1,206 @@
+<srx-header-utility 
+    title="Akun Saya" 
+    [ableBack]="false" 
+    [ableSearch]="false" 
+    [ableHome]="true">
+</srx-header-utility>
+
+<ion-content padding>
+  <srx-refresher (onRefresh)="doRefresh($event)"></srx-refresher>
+  
+  <ion-grid> 
+    <ion-row class="profile-header">
+      <ion-col size="2.3" routerLink="/setting/profile">  
+        <img src="../../../assets/images/setting/profile.png" alt="Profile Logo">
+      </ion-col> 
+      <ion-col size="9.7">  
+        <p routerLink="/setting/profile">{{profile?.name}}</p> 
+        <p routerLink="/point"><img src="../../../assets/images/setting/point.svg" alt="Point Icon"><span>{{profile?.totalPoint | currency:'IDR':'':'.0':'id' }} Points</span>
+          <img src="../../../assets/icon/chevron-right-blue.svg" alt="Chevron Logo"></p>
+      </ion-col> 
+    </ion-row>   
+  </ion-grid>
+  
+  <ion-grid class="ion-text-center mx-2 pb-0" *ngIf="!profile.isCompleted || profile.isNeedVerifyEmail">  
+    <div class="px-2" (mouseenter)="showNavHandler()" (mouseleave)="hideNavHandler()">
+      <ion-slides [pager]="!profile.isCompleted && !profile.isVerified" 
+                  [options]="slideOptsOne" 
+                  #slideWithNav 
+                  (ionSlideDidChange)="slideDidChangeHandler()">
+        <ion-slide [ngClass]="isMobileDevice() ? 'fit-mobile' :'fit-desktop'" *ngIf="!profile.isCompleted">
+          <a routerLink="/setting">
+            <ion-row class="info-card mr-0">
+              <ion-col size="2">  
+                <img width="auto" height="auto" src="../../../assets/images/account/person-availiable.svg" alt="Person Availiable">
+              </ion-col> 
+              <ion-col size="10">   
+                <p><b>Lengkapi Profile & Alamat</b> Anda untuk kenyamanan berbelanja.</p> 
+              </ion-col>  
+            </ion-row>   
+          </a>
+        </ion-slide>
+        <ion-slide [ngClass]="isMobileDevice() ? 'fit-mobile' :'fit-desktop'" *ngIf="profile.isNeedVerifyEmail">
+          <a routerLink="/setting/profile">
+            <ion-row class="info-card">
+              <ion-col size="2">  
+                <img width="auto" height="auto" src="../../../assets/images/account/email-blue.svg" alt="Email Blue">
+              </ion-col> 
+              <ion-col size="10">   
+                <p><b>Verifikasi email sekarang</b> agar memudahkan proses belanja Anda.</p> 
+              </ion-col>  
+            </ion-row>   
+          </a>
+        </ion-slide>
+      </ion-slides> 
+    </div>           
+  </ion-grid>
+
+  <ion-grid  *ngIf="!profile.isNeedVerifyEmail" class="py-0"> 
+    <ion-row>
+      <ion-col size="12" class="membership" [ngClass]="!profile.isCompleted || profile.isNeedVerifyEmail ? 'pt-3' :''">   
+        <ion-row>
+          <ion-col size="12">  
+            <p><span>{{cardFormat(profile?.cardNumber)}}</span><img (click)="copyMessage(profile?.cardNumber)" src="../../../assets/images/setting/copy-white.svg" alt="Copy Icon"></p>
+            <p>{{profile?.name}}</p>
+          </ion-col> 
+        </ion-row>  
+        <span (click)="showModalQr()" class="img-barcode"><qrcode [cssClass]="'m-0'" [qrdata]="profile?.cardNumber" [margin]="0" [width]="80"></qrcode></span>
+        
+        <img class="logo" src="../../../assets/images/home/farmaku-logo-white.png" alt="logo white">
+        <img class="bg-blue" src="../../../assets/images/setting/Background-Membership-1.png" alt="Background-Membership-1">
+      </ion-col>
+    </ion-row>
+    <!-- <ion-list lines="none" class="pt-2"> 
+      <div class="line-border">
+        <ion-item (click)="showModalQr()">
+          <ion-text slot="start">
+            <img width="auto" height="auto" src="../../../assets/images/setting/scan.svg" alt="Scan Icon">
+          </ion-text>
+          <ion-label> 
+            <p>Tampilkan QR Code</p>
+          </ion-label>
+          <ion-text slot="end"> 
+            <ion-icon width="auto" height="auto" class="icon"  name="chevron-forward"></ion-icon>
+          </ion-text>
+        </ion-item>  
+      </div>
+    </ion-list> -->
+  </ion-grid>
+  
+    
+  <ion-list lines="none" class="py-0">
+    <ion-list-header>
+      <ion-text color="dark" class="big-text font-weight-bold">Transaksi</ion-text>
+    </ion-list-header>
+    <div class="line-border">
+      <!-- <ion-item [routerLink]="['/order-history']" [queryParams]="{sc:'1'}">
+        <ion-text slot="start">
+          <img width="auto" height="auto" src="../../../assets/images/setting/money-time.svg" alt="Money Time Icon">
+        </ion-text>
+        <ion-label> 
+          <p>Menunggu Pembayaran</p>
+        </ion-label>
+        <ion-text slot="end">
+          <ion-icon width="auto" height="auto" class="icon"  name="chevron-forward"></ion-icon>
+        </ion-text>
+      </ion-item>   -->
+      <ion-item routerLink="/order-history">
+        <ion-text slot="start">
+          <img width="auto" height="auto" src="../../../assets/images/setting/receipt.svg" alt="Receipt Icon">
+        </ion-text>
+        <ion-label> 
+          <p>Transaksi</p>
+        </ion-label>
+        <ion-text slot="end">
+          <ion-icon width="auto" height="auto" class="icon"  name="chevron-forward"></ion-icon>
+        </ion-text>
+      </ion-item>
+      <ion-item routerLink="/review">
+        <ion-text slot="start">
+          <img width="auto" height="auto" src="../../../assets/images/setting/like-shapes.svg" alt="Like Shape Icon">
+        </ion-text>
+        <ion-label> 
+          <p>Ulasan Produk</p>
+        </ion-label>
+        <ion-text slot="end">
+          <span class="order-circle" *ngIf="profile?.totalUnreviewProduct > 0">{{profile?.totalUnreviewProduct}}</span><ion-icon width="auto" height="auto" class="icon"  name="chevron-forward"></ion-icon>
+        </ion-text>
+      </ion-item>
+    </div>
+  </ion-list> 
+
+  <ion-grid class="py-0">
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-text color="dark" class="big-text font-weight-bold">Akun</ion-text>
+      </ion-list-header>
+      <div class="line-border">
+        <ion-item routerLink="/setting">
+          <ion-text slot="start">
+            <img width="auto" height="auto" src="../../../assets/images/setting/user.svg" alt="User Icon">
+          </ion-text>
+          <ion-label> 
+            <p>Pengaturan Akun</p>
+          </ion-label>
+          <ion-text slot="end">
+            <ion-icon width="auto" height="auto" *ngIf="!profile.isCompleted || profile.isNeedVerifyEmail" class="icon icon-warning mr-2" name="alert-circle"></ion-icon>
+            <ion-icon width="auto" height="auto" class="icon"  name="chevron-forward"></ion-icon>
+          </ion-text>
+        </ion-item>   
+        <ion-item routerLink="/wishlist">
+          <ion-text slot="start">
+            <img width="auto" height="auto" src="../../../assets/images/setting/heart.svg" alt="Heart Icon">
+          </ion-text>
+          <ion-label> 
+            <p>Wishlist</p>
+          </ion-label>
+          <ion-text slot="end">
+            <ion-icon width="auto" height="auto" class="icon"  name="chevron-forward"></ion-icon>
+          </ion-text>
+        </ion-item>  
+      </div>
+    </ion-list> 
+
+
+    <ion-list lines="none" class="py-0">
+      <ion-list-header>
+        <ion-text color="dark" class="big-text font-weight-bold">Bantuan</ion-text>
+      </ion-list-header> 
+      <div class="line-border">
+        <ion-item routerLink="/pusat-bantuan"> 
+          <ion-text slot="start">
+            <img width="auto" height="auto" src="../../../assets/images/setting/customer-service.svg" alt="Customer Service Icon">
+          </ion-text>
+          <ion-label> 
+            <p>Pusat Bantuan</p>
+          </ion-label>
+          <ion-text slot="end">
+            <ion-icon width="auto" height="auto" class="icon"  name="chevron-forward"></ion-icon>
+          </ion-text>
+        </ion-item> 
+        <ion-item href="https://forms.gle/Vn6AuE858Y1mhEXw8" target="popup" rel="nofollow"> 
+          <ion-text slot="start">
+            <img width="auto" height="auto" src="../../../assets/images/setting/box.svg" alt="Box Icon">
+          </ion-text>
+          <ion-label> 
+            <p>Sarankan Produk</p>
+          </ion-label>
+          <ion-text slot="end">
+            <ion-icon width="auto" height="auto" class="icon"  name="chevron-forward"></ion-icon>
+          </ion-text>
+        </ion-item> 
+      </div>
+    </ion-list>
+
+    <ion-button 
+      color="danger" 
+      expand="block" 
+      fill="clear" 
+      class="srx-button logout-btn"
+      [disabled]="false"
+      (click)="logout()">
+      LOGOUT
+    </ion-button>
+    <p class="version">Version {{version}}</p>
+  </ion-grid> 
+</ion-content>

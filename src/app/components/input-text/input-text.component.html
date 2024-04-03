@@ -1,0 +1,46 @@
+<div [ngClass]="{'input-rounded':styleType == 'rounded', 'input-noborder': styleType=='no-border' }">
+  <ion-item class="item-highlight" lines="none">
+    
+    <ion-label position="floating" 
+      [class.custom-transform] = "class === 'profile-input'"
+      [class.default-transform] = "class !== 'profile-input'"
+      [class.label-error]="!isValid">
+      {{ label }}
+    </ion-label>
+
+    <span class="w-100" *ngIf="mode == ''">
+      <ion-input [type]="inputType" [inputmode]="inputType" 
+        [name]="name" [class]="class"
+        [class.input-error]="!isValid"
+        [(ngModel)]="inputModel" 
+        (ngModelChange)="inputModelChange.emit(inputModel)" 
+        (keyup)="onKeyUpEv($event)"
+        (change)="onChangeEv($event)"
+        [disabled]="disabled"
+        [readonly]="readonly"
+        min="0" #srxInput>
+      </ion-input>
+    </span>
+
+    <span class="w-100" *ngIf="mode == 'login'">
+      <ion-input [type]="inputType" [inputmode]="inputType" 
+        [class]="class"
+        [class.input-error]="!isValid"
+        [(ngModel)]="inputModel" 
+        (ngModelChange)="inputModelChange.emit(inputModel)" 
+        (keyup)="onKeyUpEv($event)"
+        (change)="onChangeEv($event)"
+        [disabled]="disabled"
+        [readonly]="readonly"
+        min="0" [prevent-keys]="[32]" appTrim>
+      </ion-input>
+    </span>
+
+    <span class="info-message"
+      [class.info-message-error]="!isValid" 
+      *ngIf="infoMessage.length">
+      {{infoMessage}}
+    </span>
+
+  </ion-item>
+</div>

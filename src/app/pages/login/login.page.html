@@ -1,0 +1,40 @@
+<srx-header title="Masuk atau Daftar"></srx-header>
+
+<ion-content>
+	<ion-grid>
+		<ion-row>
+			<ion-col size="12">
+				<ion-img class="farmaku-logo" src="../../../assets/images/farmaku.png" alt="Farmaku Logo"></ion-img>
+			</ion-col>
+
+			<ion-col size="12" class="login-form">
+				<srx-input-text label="Nomor Ponsel atau Email" infoMessage="Contoh: 08128128128" [isValid]="isValid"
+					[(inputModel)]="input" (paste)="onPaste($event)" (onKeyUp)="onTyped($event)" (input)="onInput($event)"
+					(change)="input=input.trim()" mode="login"></srx-input-text>
+			</ion-col>
+
+			<ion-col size="12">
+				<check-button [input]="input" [isDisable]="isDisable" [keyEnter]="onKeyEnter"
+					(onSubmit)="onSubmit($event)"></check-button>
+			</ion-col>
+
+			<ion-col size="12" class="spacer" *ngIf="!platform.is('ios')">
+				<hr />
+				<span>Atau Dengan</span>
+				<hr />
+			</ion-col>
+
+			<ion-col size="12" class="socmed ion-text-center" *ngIf="!platform.is('ios')">
+				<div class="outer-gbtn">
+					<div id="gbtn" *ngIf="!platform.is('capacitor')">
+					</div>
+				</div>
+
+				<ion-button class="google-btn" shape="round" fill="outline" (click)="signInWithGoogleNative()"
+					*ngIf="platform.is('capacitor') && !platform.is('ios')">
+					<ion-img src="../../../assets/images/google.png" alt="Google Logo"></ion-img>Login dengan Google
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

@@ -1,0 +1,94 @@
+.filter-title{
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px; 
+    letter-spacing: 0.01em; 
+    color: #333537;
+}
+
+.filter-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 1.25rem;
+
+    .filter-button{
+        padding: 10px 12px;
+        background-color: transparent;
+        border: 1px solid var(--ion-color-gray);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px; 
+        letter-spacing: 0.01em;  
+        color: #838588;
+        outline: none;
+
+        ion-icon{
+            color: var(--ion-color-honey);
+            font-size: 18px;
+            margin-right: 0.25rem;
+        }
+
+        .filter-img{
+            width: 25px;
+            height: 25px;
+            margin-right: 0.25rem;
+        }
+
+        &.active{
+            background: rgba(247, 126, 33, 0.05); 
+            border: 1px solid var(--ion-color-primary);
+            color: var(--ion-color-primary);
+        }
+    }
+}
+
+.srx-shadow {
+    box-shadow: 0px 0px 4px rgba(51, 53, 55, 0.16);
+}
+
+.puller{
+    position: absolute;
+    background: var(--ion-color-gray);
+    left: calc(50% - 45px);
+    width: 90px;
+    height: 6px;
+    border-radius: 8px;
+    top: 7px;
+    outline: none;
+}
+.price-input{
+    background: #FFFFFF;  
+    border: 1px solid #C1C6C6;
+    border-radius: 8px;
+    color: #838588;
+    padding-left: 0.5rem!important;
+}
+.strip{
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background: #D9D9D9;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.price-filter{
+    text-align: center;
+    button{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        min-width: 99px;
+        width: auto;
+    }
+}

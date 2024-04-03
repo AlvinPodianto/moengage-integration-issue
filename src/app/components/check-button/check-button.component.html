@@ -1,0 +1,8 @@
+<ion-button [color]="isDisable ? 'primary' : 'medium'" expand="block" fill="solid" class="srx-button"
+    [disabled]="isDisable ? 'false' : 'true'" (click)="checkAccount()">
+    {{ !isLoading
+    ? "Selanjutnya"
+    : "Mengirim"
+    }}
+    <ion-spinner name="crescent" *ngIf="isLoading"></ion-spinner>
+</ion-button>

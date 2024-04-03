@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Vitamin Supplement",
+        "url": "/category/vitamin-supplement"
+    },
+    {
+        "name": "Mom & Baby",
+        "url": "/category/mom-baby"
+    },
+    {
+        "name": "Personal Care",
+        "url": "/category/personal-care"
+    },
+    {
+        "name": "Beauty & Skincare",
+        "url": "/category/beauty-skincare"
+    },
+    {
+        "name": "Pharmacy",
+        "url": "/category/pharmacy"
+    }
+]
